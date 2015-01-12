@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="thegame">
 <head>
-<title>TheGame</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" />
-<!-- Load angularjs -->
-<script src="js/libs/angular.js"></script>
-<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
-<script src="js/libs/angular-resource.js"></script>
-<!-- Load the controllers for our app -->
-<script src="js/controllers.js"></script>
-<!-- Load the application wide JS, such as route definitions -->
-<script src="js/app.js"></script>
-<!-- Load the services we have defined for the application, particularly the REST services -->
-<script src="js/services.js"></script>
+	<title>TheGame</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<!--link rel="stylesheet" href="css/screen.css" type="text/css" / -->
+	<!-- Load angularjs -->
+	<script src="js/libs/angular.js"></script>
+	<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+	<script src="js/libs/angular-resource.js"></script>
+	<!-- Load Bootstrap -->
+	<script src="js/libs/bootstrap.js"></script>
+	<!-- Load the controllers for our app -->
+	<script src="js/controllers.js"></script>
+	<!-- Load the application wide JS, such as route definitions -->
+	<script src="js/app.js"></script>
+	<!-- Load the services we have defined for the application, particularly the REST services -->
+	<script src="js/services.js"></script>
 
 </head>
 <body>
@@ -21,7 +26,7 @@
 		<img src="images/webcontext_logo.png" class="logo" alt="Web-Cntext logo" title="Web-Context.com / DaAppsFactory"/>
 		<h1>TheGame</h1>
 	</header>
-	<div id="content" ng-view>
+	<div id="content" class="container" ng-view>
 		[Template content will be inserted here]
 	</div>
 	<footer id="footer">
