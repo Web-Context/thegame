@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<ul><li><a href="#addUser" id="addUser" class="addUser btn btn-default">Create User</a></li></ul>
+
 <!-- This is a partial, and is templated by AngularJS -->
 <div class="">
     <!-- Standard HTML form, with the submit function bound to the register() function defined in the the controller -->
-    <form id="reg" ng-submit="register()" class="form-horizontal hide">
+    <form id="addUserForm" ng-submit="register()" class="form-horizontal hide">
         <fieldset>
             <legend>Register a user:</legend>
             <!-- Each input is bound to a property on the prototype newuser object -->
@@ -54,7 +56,7 @@
     <h2>Users</h2>
     <!-- If there are no Users registered, instead of showing the table, we show a simple message. -->
     <em ng-show="Users.length == 0">No registered Users.</em>
-    <table ng-hide="Users.length == 0" class="simpletablestyle">
+    <table class="table" ng-hide="Users.length == 0" class="simpletablestyle">
         <thead>
             <tr>
                 <th>Id</th>
@@ -82,3 +84,15 @@
             id="refresh" value="Refresh" />
     </div>
 </div>
+<script type="text/javascript">
+$(window).ready(function(){
+    $("a.addUser").click(function(e){
+        $("#addUserForm").modal();
+    }); 
+    $("#addUserForm").hide();
+    $("#addUserForm .ok").click(function(e){
+
+        alert("coucou");
+    });
+});
+</script>
