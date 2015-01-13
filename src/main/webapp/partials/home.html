@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- This is a partial, and is templated by AngularJS -->
-<div>
+<div class="">
     <!-- Standard HTML form, with the submit function bound to the register() function defined in the the controller -->
-    <form id="reg" ng-submit="register()" class="form modal">
+    <form id="reg" ng-submit="register()" class="form-horizontal hide">
         <fieldset>
             <legend>Register a user:</legend>
             <!-- Each input is bound to a property on the prototype newuser object -->
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name"  ng-model="newuser.name" placeholder="Your Name" required autofocus/>
+            <div class="form-group">
+                <label class="col-md-4 control-label"  for="name">Name:</label>
+                <input type="text" class="form-control input-md" name="name" id="name"  ng-model="newuser.name" placeholder="Your Name" required autofocus/>
                 <span class="error" ng-show="errors.name">{{errors.name}}</span>
+                <span class="help-block">Please choose a name (25 characters max.)</span>
             </div>
-            <div>
-                <label for="name">Password:</label>
-                <input type="password" name="password" id="password"  ng-model="newuser.password" placeholder="Your password" required autofocus/>
+            <div class="form-group">
+                <label class="col-md-4 control-label"  for="name">Password:</label>
+                <input type="password" class="form-control input-md" name="password" id="password"  ng-model="newuser.password" placeholder="Your password" required autofocus/>
                 <span class="error" ng-show="errors.password">{{errors.password}}</span>
+                <span class="help-block">Please ener your own password, it must contains at least 8 char. and a max of 25 char. composed of alphanumerical characters and at leat one ponctuation char.</span>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" ng-model="newuser.email" placeholder="Your Email" required/>
+            <div class="form-group">
+                <label class="col-md-4 control-label"  for="email">Email:</label>
+                <input type="email" class="form-control input-md" name="email" id="email" ng-model="newuser.email" placeholder="Your Email" required/>
                 <span class="error" ng-show="errors.email">{{errors.email}}</span>
+                <span class="help-block">Enter a valide email, it will be used soon for an email validation process.</span>
             </div>
-            <div>
-                <label for="phoneNumber">Phone #:</label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" ng-model="newuser.phoneNumber" pattern="[0-9]{10,12}" placeholder="Your Phone #" required/>
+            <div class="form-group">
+                <label class="col-md-4 control-label"  for="phoneNumber">Phone #:</label>
+                <input type="tel" class="form-control input-md" name="phoneNumber" id="phoneNumber" ng-model="newuser.phoneNumber" pattern="[0-9]{10,12}" placeholder="Your Phone #" required/>
                 <span class="error" ng-show="errors.phoneNumber">{{errors.phoneNumber}}</span>
+                <span class="help-block">You must provide a valide phone number.</span>
             </div>
             
             <!-- We output a list of success messages (appropriately styled!) for the form. -->
@@ -37,13 +41,13 @@
                 <li ng-repeat="message in errorMessages">{{message}}</li>
             </ul>
 
-            <!-- There are two buttons, the default submit action (which is bound for the whole form), and a reset button, that clears the form. -->
-            <div>
-                <input type="submit" id="register" value="Register" />
-                <input type="button" ng-click="reset()" name="cancel"
-                    id="cancel" value="Cancel" />
-            </div>
         </fieldset>
+        <!-- There are two buttons, the default submit action (which is bound for the whole form), and a reset button, that clears the form. -->
+        <div class="form-group">
+            <input type="submit" id="register" value="Register" />
+            <input type="button" ng-click="reset()" name="cancel"
+                id="cancel" value="Cancel" />
+        </div>
     </form>
 
     <!-- A list of registered Users -->
