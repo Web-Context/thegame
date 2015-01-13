@@ -50,7 +50,7 @@
     <h2>Users</h2>
     <!-- If there are no Users registered, instead of showing the table, we show a simple message. -->
     <em ng-show="Users.length == 0">No registered Users.</em>
-    <table ng-hide="Users.length == 0" class="simpletablestyle">
+    <table ng-hide="Users.length == 0" class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -61,7 +61,7 @@
             </tr>
         </thead>
         <!-- The table is built using the AngularJS repeat function, iterating over the Users variable, and ordering by the property specified in the orderBy variable -->
-        <tr ng-repeat="user in Users | orderBy:orderBy">
+        <tr ng-repeat="user in users | orderBy:orderBy">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
