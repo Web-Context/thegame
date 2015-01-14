@@ -33,6 +33,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+/**
+ * User for the TheGame application. this entity is used to identitied user
+ * account on the web site.
+ * 
+ * @author Frédéric Delorme<frederic.delorme@web-context.com>
+ *
+ */
 @SuppressWarnings("serial")
 @Entity
 @XmlRootElement
@@ -47,9 +54,9 @@ public class User implements Serializable {
 	@Size(min = 1, max = 25)
 	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
 	private String name;
-	
+
 	@NotNull
-	@Size(min = 8, max=25)
+	@Size(min = 8, max = 25)
 	private String password;
 
 	@NotNull
@@ -87,7 +94,8 @@ public class User implements Serializable {
 	}
 
 	/**
-	 * @param password the password to set
+	 * @param password
+	 *            the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;
@@ -108,4 +116,28 @@ public class User implements Serializable {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("User [");
+		if (id != null)
+			builder.append("id=").append(id).append(", ");
+		if (name != null)
+			builder.append("name=").append(name).append(", ");
+		if (password != null)
+			builder.append("password=").append(password).append(", ");
+		if (email != null)
+			builder.append("email=").append(email).append(", ");
+		if (phoneNumber != null)
+			builder.append("phoneNumber=").append(phoneNumber);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

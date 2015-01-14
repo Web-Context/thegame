@@ -7,7 +7,7 @@
    <datasource jndi-name="java:jboss/datasources/TheGameTestDS"
       pool-name="the-game-test" enabled="true"
       use-java-context="true">
-      <connection-url>jdbc:h2:mem:the-game-test;DB_CLOSE_DELAY=-1</connection-url>
+      <connection-url>jdbc:h2:file:/db/thegame-test;DB_CLOSE_DELAY=-1</connection-url>
       <driver>h2</driver>
       <security>
          <user-name>sa</user-name>
