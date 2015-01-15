@@ -19,9 +19,35 @@
 	src: local('Righteous'), local('Righteous-Regular'), url(https://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-html >* {
+html > * {
 	font-family: 'Righteous'
 }
+.page-content .page-header{
+	background-color:#000;
+	color:#fff;
+	padding:1em;
+}
+.page-content .page-header h1 {
+	font-size:3em;
+}
+.page-content .page-header nav.menu{
+	
+}
+.page-content .page-header nav.menu ul {
+	list-style:none;
+	padding:0em;
+	margin:0em;
+}
+.page-content .page-header nav.menu ul li {
+	display:inline-block;
+	padding:0em;
+	margin:0.2em 1em;
+}
+
+.page-content .page-footer{
+	
+}
+
 /*----- Games list for platform -----*/
 section.games {
 	padding:10px;

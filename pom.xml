@@ -17,7 +17,7 @@
 			<distribution>repo</distribution>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
 		</license>
-	</licenses> 
+	</licenses>
 
 	<properties>
 		<!-- Explicitly declaring the source encoding eliminates the following 
@@ -155,6 +155,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 
 		<!-- Optional, but highly recommended -->

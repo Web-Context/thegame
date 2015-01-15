@@ -1,6 +1,8 @@
 package com.webcontext.apps.thegame.model;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +18,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.URL;
+
+import com.google.gson.Gson;
 
 /**
  * An entity representing a video game entry.
@@ -273,15 +277,88 @@ public class Game {
 	/**
 	 * @return the rates
 	 */
-	public String getRates() {
-		return rates;
+	public Map<String,String> getRates(String rateName) {
+		Map<String,String> ratesMap = new HashMap<>();
+		Gson gson = new Gson();
+		ratesMap = (Map<String,String>)gson.fromJson(rates, Map.class); 
+		return ratesMap;
 	}
-
+	
 	/**
 	 * @param rates the rates to set
 	 */
 	public void setRates(String rates) {
 		this.rates = rates;
+	}
+
+	/**
+	 * @return the barcode
+	 */
+	public String getBarcode() {
+		return barcode;
+	}
+
+	/**
+	 * @param barcode the barcode to set
+	 */
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+
+	/**
+	 * @return the platform
+	 */
+	public String getPlatform() {
+		return platform;
+	}
+
+	/**
+	 * @param platform the platform to set
+	 */
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
+
+	/**
+	 * @return the editor
+	 */
+	public String getEditor() {
+		return editor;
+	}
+
+	/**
+	 * @param editor the editor to set
+	 */
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+
+	/**
+	 * @return the plus
+	 */
+	public String[] getPlus() {
+		return plus.split(",");
+	}
+
+	/**
+	 * @param plus the plus to set
+	 */
+	public void setPlus(String plus) {
+		this.plus = plus;
+	}
+
+	/**
+	 * @return the minus
+	 */
+	public String[] getMinus() {
+		return minus.split(",");
+	}
+
+	/**
+	 * @param minus the minus to set
+	 */
+	public void setMinus(String minus) {
+		this.minus = minus;
 	}
 
 }
