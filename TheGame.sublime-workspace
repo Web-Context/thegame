@@ -1,0 +1,347 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"cm",
+				"com"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "DEPS : \n\n\n[_] See Olivier ou Sandy pour savoir sid la Post-Installation Form comporte des informations de confirmation de validation des flux.\n\n[_] Comment fonctionne le De-ID tools depuis DoseWatch (config sur FPPR ? tempalte ?)",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Windows",
+				"name": "DEPS :"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"gitadd",
+				"Git: Quick Add"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"pre",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"prev",
+				"OmniMarkupPreviewer: Export Current Markup as HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/212391884/perso/projects/java/thegame/pom.xml",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/GitStatus/Default.sublime-commands",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/User/SublimeGit.sublime-settings",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/D/Projects/dosewatch/1.4.1/SerphyDose/DoseWatch-core-ejb/src/main/java/com/serphydose/core/tasks/CalculatedValuesManager.java",
+		"/C/Users/212391884/perso/projects/java/thegame/src/main/webapp/index.html",
+		"/C/Users/212391884/perso/projects/java/thegame/src/main/webapp/partials/home.html",
+		"/C/Users/212391884/perso/projects/java/thegame/.travis.yml",
+		"/D/tools/java/servers/wildfly/8.1.0.Final/bin/add-user.properties",
+		"/C/Users/212391884/Desktop/DEPS-Todo.textile",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/OmniMarkupPreviewer/OmniMarkupPreviewer.sublime-settings",
+		"/C/Users/212391884/Documents/SerphyDocs/GE/entretiens technique/sujet/technical-interview-subject-1-en.textile",
+		"/C/Users/212391884/Desktop/TODO.textile",
+		"/C/Users/212391884/Desktop/TODO2.textile",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/OmniMarkupPreviewer/public/sequence-diagram-min.js",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/OmniMarkupPreviewer/templates/github-docs.tpl",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/User/OmniMarkupPreviewer/templates/github-docs.tpl",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/User/OmniMarkupPreviewer.sublime-settings",
+		"/D/temp/dw20-dev-station-setup/scripts/userjavaenv.bat",
+		"/D/temp/dw20-dev-station-setup/scripts/jide.bat",
+		"/C/Users/212391884/Desktop/Wildfly-todo.textile",
+		"/D/temp/dw20-dev-station-setup/scripts/javaenv.bat",
+		"/C/Users/212391884/Desktop/eclipse.ini",
+		"/C/Users/212391884/Desktop/ComboExam_impl_20141127.textile",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/OmniMarkupPreviewer/templates/github.tpl",
+		"/D/temp/dw20-dev-station-setup/ide/eclipse/lifecycle-mapping-metadata.xml",
+		"/D/tools/scripts/javaenv.bat",
+		"/C/Users/212391884/userjavaenv.bat",
+		"/D/temp/dw20-dev-station-setup/setup.bat",
+		"/D/tools/scripts/jide.bat",
+		"/D/temp/dw20-dev-station-setup/ide/eclipse/eclipse.ini",
+		"/D/tools/ide/eclipse/4.4/eclipse.ini",
+		"/C/Users/212391884/Desktop/Security-McAfee purpose_20141121.txt",
+		"/C/Users/212391884/.m2/settings-sonar.xml",
+		"/C/Users/212391884/.m2/settings.xml",
+		"/F/DEPS/DEPS-Todo.textile",
+		"/C/Users/212391884/Desktop/Migration.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/DEPS/DEPS-Todo.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/DEPS/DEPS.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/e-learning/DEPS-20140625/deps.textile",
+		"/C/Users/212391884/.ssh/config",
+		"/D/temp/dw20-dev-station-setup/readme.html",
+		"/D/temp/dw20-dev-station-setup/docs/css/docs.css",
+		"/D/temp/dw20-dev-station-setup/migration-to-dev-20.textile",
+		"/D/temp/dw20-dev-station-setup/setup-test.bat",
+		"/D/toolstest/scripts/jide.bat",
+		"/D/toolstest/scripts/javaenv.bat",
+		"/C/Users/212391884/Desktop/WIP/DEPS-Todo.textile",
+		"/C/Users/212391884/Desktop/training-purpose.txt",
+		"/D/software-repository/monitoring-agent-1.0.1-SNAPSHOT/monitoring.bat",
+		"/D/dwmonitoring/conf/configuration.json",
+		"/D/dwmonitoring/log/myoutput.log",
+		"/D/temp/dw20-dev-station-setup/testeclipse.bat",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/FPPR/Nuance/customFieldsTemplate.xml",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/FPPR/HL7_Outbound_ORU/HL7_outbound_ORU_template.xml",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/FPPR/HL7_Outbound_ORU/iguana_hl7_from_http_channel.igu",
+		"/C/Users/212391884/Desktop/Start Java IDE.lnk",
+		"/D/Projects/dosewatch/1.4.1/SerphyDose/DoseWatch-core-ejb/src/test/resources/vm/hl7_template-lomalinda.vm",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/HL7_outbound_ORU_message.txt",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/HL7_outbound_ORU_template.xml",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Connectivity/RDSR_template.xml",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/DW-DoseWatch/2.0/GlassFish-WildFly/Wildfly-migration-CR-20141022.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/roadmap/Technical Roadmap-20141015.textile",
+		"/C/Users/212391884/Desktop/AngularJS-BBL-20140905-v1.0.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/MT-Monitoring/agent-probes/URLPingProbe.textile",
+		"/D/tools/editor/sublimetext/2.0.2x64/Data/Packages/User/OmniMarkupPreviewer/public/docs.css",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/MT-Monitoring/agent-probes/QueryDBProbe-evolution.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/MT-Monitoring/ControlProbe/control_messages_type.json",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/CO-Contrast/dw-modality-contrast-codereview-20141017.textile",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/DW-DoseWatch/2.0/GlassFish-WildFly/Wildfly-migration-CR-20141010.textile",
+		"/C/Users/212391884/Dropbox/Documents/divers/home_network.txt",
+		"/C/Users/212391884/Dropbox/Documents/home_network.txt",
+		"/C/Users/212391884/Desktop/check_lexicon_cv.sql",
+		"/C/Users/212391884/Documents/SerphyDocs/technos/javascript/w2ui/index.html",
+		"/D/dw_tools/setup.bat",
+		"/C/Users/212391884/Dropbox/Projects/tutorials/git-tutorial/discovering-git.textile",
+		"/C/Users/212391884/Documents/java.textile",
+		"/D/tools/scripts/javaenv.sh",
+		"/D/tools/scripts/jide.sh",
+		"/C/Users/212391884/.javaenv",
+		"/C/Users/212391884/.bashrc",
+		"/C/Users/212391884/.bash_alias",
+		"/C/Users/212391884/Documents/SerphyDocs/architecture/Applications/DW-DoseWatch/2.0/wildfly-migration-CR-20140924.textile",
+		"/C/Users/212391884/perso/projects/java/smartjava/README.md",
+		"/D/tools/java/tools/sonarqube/4.2/conf/sonar.properties",
+		"/C/Users/212391884/perso/projects/java/easytest-core/README.md",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.tools.seam.core.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.atlassian.connector.eclipse.bamboo.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.atlassian.connector.eclipse.jira.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.atlassian.connector.eclipse.monitor.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.j2ee.webservice.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.core.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.cvs.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.server.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.ide.eclipse.as.ui.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.tools.central.prefs",
+		"/C/Users/212391884/workspaces/easy-test/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.tools.runtime.ui.prefs",
+		"/D/Projects/monitoring/supervision/monitoring-restserver/README.md",
+		"/F/Projects/perso/tutorials/tutorial-maven/logs/mvn-goal-compile-log.txt",
+		"/C/Users/212391884/perso/projects/java/smartjava/vertx-demo-1/README.md",
+		"/C/Users/212391884/perso/projects/libgdx/pixel-knight/docs/gimp-pixel-art-cheet-sheat.textile"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"TortoiseGitProc",
+			"tools",
+			"com",
+			"	View	Duplicate ",
+			"</option>",
+			"<option value=",
+			"java"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"auto_name": "DEPS :",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true
+}

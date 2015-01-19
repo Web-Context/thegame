@@ -82,3 +82,15 @@
             id="refresh" value="Refresh" />
     </div>
 </div>
+<script type="text/javascript">
+$(window).ready(function(){
+    $("a.addUser").click(function(e){
+        $("#addUserForm").modal();
+    }); 
+    $("#addUserForm").hide();
+    $("#addUserForm .ok").click(function(e){
+
+        alert("coucou");
+    });
+});
+</script>

@@ -2,6 +2,7 @@ package com.webcontext.apps.thegame.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -11,33 +12,24 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.persistence.UsingDataSet;
 import org.jboss.shrinkwrap.api.Archive;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.webcontext.apps.thegame.data.GameRepository;
 import com.webcontext.apps.thegame.model.Game;
-import com.webcontext.apps.thegame.util.Resources;
 
 /**
- * @author frede_000
+ * TestUnit Class to test the GameRepository imlpementation.
+ * 
+ * @author Frédéric Delorme<frederic.delorme@web-context.com>
  *
  */
 @RunWith(Arquillian.class)
 @UsingDataSet("dataset/games.json")
-public class GameRepositoryTest {
+public class GameRepositoryTest extends BasicUnitTest {
 	@Deployment
-	public static Archive<?> createTestArchive() {
-		return ShrinkWrap
-				.create(WebArchive.class, "test.war")
-				.addClasses(Game.class, GameRepository.class, Resources.class)
-				.addAsResource("META-INF/test-persistence.xml",
-						"META-INF/persistence.xml")
-				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-				// Deploy our test datasource
-				.addAsWebInfResource("test-ds.xml");
+	public static Archive<?> createAndDeploy() {
+		return createAndDeploy();
 	}
 
 	@Inject
@@ -45,12 +37,17 @@ public class GameRepositoryTest {
 
 	/**
 	 * Test method for
-	 * {@link com.webcontext.apps.thegame.data.GameRepository#findById(java.lang.Long)}
+	 * {@link com.webcontext.apps.thegame.data.GameRepository#retrieve(java.lang.Long)}
 	 * .
 	 */
 	@Test
 	public void testFindById() {
-		Game game = gameRepository.findById(0L);
+		Game game = null;
+		try {
+			game = gameRepository.retrieve(1L);
+		} catch (ClassNotFoundException e) {
+			fail("Unable to retrieve entity Game");
+		}
 		assertNotNull("Game id=0 was not found !", game);
 	}
 
@@ -81,7 +78,7 @@ public class GameRepositoryTest {
 
 	/**
 	 * Test method for
-	 * {@link com.webcontext.apps.thegame.data.GameRepository#save(com.webcontext.apps.thegame.model.Game)}
+	 * {@link com.webcontext.apps.thegame.data.GameRepository#create(com.webcontext.apps.thegame.model.Game)}
 	 * .
 	 */
 	@Test
