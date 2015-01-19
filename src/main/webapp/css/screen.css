@@ -65,7 +65,15 @@ html>* {
 }
 
 .page-content .page-footer {
-	
+	position:absolute;
+	bottom:0px;
+	text-align:center;
+	background-color:#000;
+	color:#fff;
+	display:block;
+	width:100%;
+	margin:0px;
+	padding:10px 0px;
 }
 
 /*----- Games list for platform -----*/
@@ -145,7 +153,7 @@ section.games article.game div.header ul.platforms li:before {
 article.game {
 	font-family: Arial;
 	padding: 2% 4%;
-	width: 100%;
+	width: 90%;
 }
 
 article.game img.cover {
@@ -278,7 +286,7 @@ article.game div.note {
 	float: right;
 	text-align: center;
 	vertical-align: middle;
-	font-size: 42pt;
+	font-size: 24pt;
 	background-color: #000;
 	color: #fff;
 	padding: 0px;

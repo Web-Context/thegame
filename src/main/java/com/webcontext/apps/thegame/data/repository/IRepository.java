@@ -26,7 +26,7 @@ public interface IRepository<T, PK> {
 	 *            the unique identifier <PK> for the entity to be retrieved.
 	 * @return return the corresponding entity <T> to the id key <PK> value.
 	 */
-	public abstract T retrieve(PK id) throws ClassNotFoundException;
+	public abstract T retrieve(Long id) throws ClassNotFoundException;
 
 	/**
 	 * Retrieve all entities <T> from the persistence system.

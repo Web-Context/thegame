@@ -31,8 +31,10 @@ import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
 import javax.validation.Validator;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -110,6 +112,64 @@ public class GameRESTService {
 			responseObj.put("title", "Title taken");
 			builder = Response.status(Response.Status.CONFLICT).entity(
 					responseObj);
+		} catch (Exception e) {
+			// Handle generic exceptions
+			Map<String, String> responseObj = new HashMap<>();
+			responseObj.put("error", e.getMessage());
+			builder = Response.status(Response.Status.BAD_REQUEST).entity(
+					responseObj);
+		}
+
+		return builder.build();
+	}
+
+	@PUT
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response update(Game game) {
+		Response.ResponseBuilder builder = null;
+
+		try {
+			// Validates member using bean validation
+			validateMember(game);
+
+			repository.update(game);
+
+			// Create an "ok" response
+			builder = Response.ok();
+		} catch (ConstraintViolationException ce) {
+			// Handle bean validation issues
+			builder = createViolationResponse(ce.getConstraintViolations());
+		} catch (ValidationException e) {
+			// Handle the unique constrain violation
+			Map<String, String> responseObj = new HashMap<>();
+			responseObj.put("title", "Title taken");
+			builder = Response.status(Response.Status.CONFLICT).entity(
+					responseObj);
+		} catch (Exception e) {
+			// Handle generic exceptions
+			Map<String, String> responseObj = new HashMap<>();
+			responseObj.put("error", e.getMessage());
+			builder = Response.status(Response.Status.BAD_REQUEST).entity(
+					responseObj);
+		}
+
+		return builder.build();
+	}
+
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response delete(Game game) {
+		Response.ResponseBuilder builder = null;
+
+		try {
+
+			repository.delete(game);
+
+			// Create an "ok" response
+			builder = Response.ok();
+
 		} catch (Exception e) {
 			// Handle generic exceptions
 			Map<String, String> responseObj = new HashMap<>();

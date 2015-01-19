@@ -1,8 +1,8 @@
 package com.webcontext.apps.thegame.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -42,11 +42,11 @@ public class GameRepositoryTest extends BasicUnitTest {
 	 */
 	@Test
 	public void testFindById() {
-		Game game=null;
+		Game game = null;
 		try {
 			game = gameRepository.retrieve(1L);
 		} catch (ClassNotFoundException e) {
-			fail("Unable ti retrieve entity Game");
+			fail("Unable to retrieve entity Game");
 		}
 		assertNotNull("Game id=0 was not found !", game);
 	}

@@ -1,5 +1,6 @@
 package com.webcontext.apps.thegame.data.repository;
 
+import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -9,6 +10,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+import com.webcontext.apps.thegame.util.FileIO;
 
 /**
  * THis GenericRepository implements basic method for CRUD operation.
@@ -22,6 +28,13 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 
 	@Inject
 	protected EntityManager em;
+
+	/**
+	 * Date formatter to be used to convert date in serialize/deserialize
+	 * operations.
+	 */
+	protected Gson gson = new GsonBuilder()
+			.setDateFormat("YYYY-mm-dd hh:MM:SS").create();
 
 	/**
 	 * This is the container for the Class of the <T> parameter.
@@ -47,7 +60,7 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 	T entity;
 
 	@Override
-	public T retrieve(PK id) throws ClassNotFoundException {
+	public T retrieve(Long id) throws ClassNotFoundException {
 		return em.find(getGenericClass(), id);
 	}
 
@@ -81,6 +94,36 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 		Root<T> entity = criteria.from(inferedClass);
 		criteria.select(entity).orderBy(cb.asc(entity.get("title")));
 		return em.createQuery(criteria).getResultList();
+	}
+
+	/**
+	 * Read the T object list from a JSON file.
+	 * 
+	 * @param filePath
+	 *            the JSON file to be read and parsed to produce a
+	 *            <code>List<T></code> objects.
+	 * @return return a list of T object as a <code>list<T></code>.
+	 * @throws IOException
+	 */
+	public List<T> loadObjectFromJSONFile(String filePath) throws IOException {
+		String json = FileIO.fastRead(filePath);
+		TypeToken<List<T>> token = new TypeToken<List<T>>() {
+		};
+		List<T> list = gson.fromJson(json, token.getType());
+
+		return list;
+	}
+
+	/**
+	 * Count the number of entities <T> in database.
+	 * 
+	 * @return
+	 */
+	public long count() {
+		CriteriaBuilder qb = em.getCriteriaBuilder();
+		CriteriaQuery<Long> cq = qb.createQuery(Long.class);
+		cq.select(qb.count(cq.from(inferedClass)));
+		return em.createQuery(cq).getSingleResult();
 	}
 
 }
