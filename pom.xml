@@ -202,7 +202,7 @@
 				<version>${version.war.plugin}</version>
 				<configuration>
 					<!-- Java EE 7 doesn't require web.xml, Maven needs to catch up! -->
-					<failOnMissingWebXml>true</failOnMissingWebXml>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 			<!-- The WildFly plugin deploys your war to a local WildFly container -->
@@ -268,7 +268,6 @@
 				<dependency>
 					<groupId>org.wildfly</groupId>
 					<artifactId>wildfly-arquillian-container-remote</artifactId>
-					<version>${version.arquillian.container}</version>
 					<scope>test</scope>
 				</dependency>
 			</dependencies>

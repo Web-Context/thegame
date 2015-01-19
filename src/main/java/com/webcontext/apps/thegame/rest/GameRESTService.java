@@ -72,7 +72,7 @@ public class GameRESTService {
 	@Path("/{id:[0-9][0-9]*}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Game lookupMemberById(@PathParam("id") long id) {
-		Game game = repository.findById(id);
+		Game game = (Game) repository.findById(id);
 		if (game == null) {
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}
