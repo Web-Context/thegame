@@ -26,6 +26,10 @@ html > * {
 	background-color:#000;
 	color:#fff;
 	padding:1em;
+	background-image:url("../images/webcontext_logo.png");
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	padding-left:10em;
 }
 .page-content .page-header h1 {
 	font-size:3em;
@@ -45,7 +49,15 @@ html > * {
 }
 
 .page-content .page-footer{
-	
+	position:absolute;
+	display:block;
+	text-align:center;
+	bottom:0px;
+	margin:0px;
+	padding:10px 0px;
+	width:100%;
+	background-color:#000;
+	color:#fff;	
 }
 
 /*----- Games list for platform -----*/
@@ -115,7 +127,7 @@ section.games article.game div.header ul.platforms li:before{
 article.game {
 	font-family: Arial;
 	padding: 2% 4%;
-	width:100%;
+	width:90%;
 }
 article.game img.cover {
 	float: left;
