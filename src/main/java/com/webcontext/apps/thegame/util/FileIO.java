@@ -78,7 +78,7 @@ public class FileIO {
 	 * @throws IOException
 	 */
 	public static String fastRead(String file) throws IOException {
-		String fullPath = FileIO.class.getResource("/").getPath() + file;
+		String fullPath = FileIO.class.getResource("/file").getPath();
 		Path filePath = new File(fullPath).toPath();
 		return new String(Files.readAllBytes(filePath));
 	}

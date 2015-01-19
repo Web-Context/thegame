@@ -1,6 +1,5 @@
 package com.webcontext.apps.thegame.data.repository;
 
-import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -97,20 +96,28 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 	}
 
 	/**
-	 * Read the T object list from a JSON file.
+	 * Read the T object list from a JSON file name <code>filePath</code>, and
+	 * if <code>storeToDabase</code> is true, store loaded object to
+	 * corresponding entity.
 	 * 
 	 * @param filePath
 	 *            the JSON file to be read and parsed to produce a
 	 *            <code>List<T></code> objects.
+	 * @param storeToDatabase
+	 *            a flag set to true if you need to store data from
+	 *            <code>filePath</code> to database.
 	 * @return return a list of T object as a <code>list<T></code>.
-	 * @throws IOException
+	 * @throws Exception
 	 */
-	public List<T> loadObjectFromJSONFile(String filePath) throws IOException {
+	public List<T> loadObjectFromJSONFile(String filePath,
+			boolean storeToDatabase) throws Exception {
 		String json = FileIO.fastRead(filePath);
 		TypeToken<List<T>> token = new TypeToken<List<T>>() {
 		};
 		List<T> list = gson.fromJson(json, token.getType());
-
+		for (T entity : list) {
+			this.create(entity);
+		}
 		return list;
 	}
 
@@ -120,9 +127,15 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 	 * @return
 	 */
 	public long count() {
-		CriteriaBuilder qb = em.getCriteriaBuilder();
-		CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-		cq.select(qb.count(cq.from(inferedClass)));
+		CriteriaQuery<Long> cq = null;
+		try {
+			CriteriaBuilder qb = em.getCriteriaBuilder();
+			cq = qb.createQuery(Long.class);
+			cq.select(qb.count(cq.from(getGenericClass())));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return em.createQuery(cq).getSingleResult();
 	}
 

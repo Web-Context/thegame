@@ -66,8 +66,16 @@ public class GameRESTService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Game> listAllMembers() {
+	public List<Game> listAll() {
 		return repository.findAllOrderedByTitle();
+	}
+
+	@GET
+	@Path("/{offset}-{size}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Game> listAll(@PathParam("offset") int offset,
+			@PathParam("size") int pageSize) {
+		return repository.findAll(offset, pageSize);
 	}
 
 	@GET
