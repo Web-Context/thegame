@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 import java.util.logging.Logger;
 
 import javax.inject.Inject;
+import javax.validation.ConstraintViolationException;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -21,31 +22,46 @@ import com.webcontext.apps.thegame.util.Resources;
 
 @RunWith(Arquillian.class)
 public class UserRegistrationTest {
-    @Deployment
-    public static Archive<?> createTestArchive() {
-        return ShrinkWrap.create(WebArchive.class, "test.war")
-                .addClasses(User.class, UserRegistration.class, Resources.class)
-                .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-                // Deploy our test datasource
-                .addAsWebInfResource("test-ds.xml");
-    }
+	@Deployment
+	public static Archive<?> createTestArchive() {
+		return ShrinkWrap
+				.create(WebArchive.class, "test.war")
+				.addClasses(User.class, UserRegistration.class, Resources.class)
+				.addAsResource("META-INF/test-persistence.xml",
+						"META-INF/persistence.xml")
+				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+				// Deploy our test datasource
+				.addAsWebInfResource("test-ds.xml");
+	}
 
-    @Inject
-    UserRegistration userRegistration;
+	@Inject
+	UserRegistration userRegistration;
 
-    @Inject
-    Logger log;
+	@Inject
+	Logger log;
 
-    @Test
-    public void testRegister() throws Exception {
-        User newMember = new User();
-        newMember.setName("Jane Doe");
-        newMember.setEmail("jane@mailinator.com");
-        newMember.setPhoneNumber("2125551234");
-        userRegistration.register(newMember);
-        assertNotNull(newMember.getId());
-        log.info(newMember.getName() + " was persisted with id " + newMember.getId());
-    }
+	@Test(expected = ConstraintViolationException.class)
+	public void testRegisterError() throws Exception {
+		User newMember = new User();
+		newMember.setName("Jane Doe");
+		newMember.setEmail("jane@mailinator.com");
+		newMember.setPhoneNumber("2125551234");
+		userRegistration.register(newMember);
+		assertNotNull(newMember.getId());
+		log.info(newMember.getName() + " was persisted with id "
+				+ newMember.getId());
+	}
 
+	@Test
+	public void testRegister() throws Exception {
+		User newMember = new User();
+		newMember.setName("Jane Doe");
+		newMember.setEmail("jane@mailinator.com");
+		newMember.setPhoneNumber("2125551234");
+		newMember.setPassword("testesttests");
+		userRegistration.register(newMember);
+		assertNotNull(newMember.getId());
+		log.info(newMember.getName() + " was persisted with id "
+				+ newMember.getId());
+	}
 }
