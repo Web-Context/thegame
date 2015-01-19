@@ -4,7 +4,6 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
-import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -20,6 +19,9 @@ import javax.persistence.criteria.Root;
  * @param <PK>
  */
 public class GenericRepository<T, PK> implements IRepository<T, PK> {
+
+	@Inject
+	protected EntityManager em;
 
 	/**
 	 * This is the container for the Class of the <T> parameter.
@@ -38,9 +40,6 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 		return inferedClass;
 	}
 
-	@Inject
-	protected EntityManager em;
-
 	public GenericRepository() {
 		super();
 	}
@@ -48,23 +47,35 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 	T entity;
 
 	@Override
-	public T findById(PK id) {
-		return em.find(inferedClass, id);
+	public T retrieve(PK id) throws ClassNotFoundException {
+		return em.find(getGenericClass(), id);
 	}
 
 	@Override
-	public void save(T entity) throws Exception {
+	public T create(T entity) throws Exception {
 		em.persist(entity);
+		em.flush();
+		return entity;
+
+	}
+
+	@Override
+	public T update(T entity) throws Exception {
+		entity = em.merge(entity);
+		em.flush();
+		return entity;
+
 	}
 
 	@Override
 	public void delete(T entity) throws Exception {
 		em.remove(entity);
+		em.flush();
 
 	}
 
 	@Override
-	public List<T> findAll(PK id, int offset, int pageSize) {
+	public List<T> findAll(int offset, int pageSize) {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<T> criteria = cb.createQuery(inferedClass);
 		Root<T> entity = criteria.from(inferedClass);

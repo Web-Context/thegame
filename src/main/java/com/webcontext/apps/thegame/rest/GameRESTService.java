@@ -71,8 +71,10 @@ public class GameRESTService {
 	@GET
 	@Path("/{id:[0-9][0-9]*}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Game lookupMemberById(@PathParam("id") long id) {
-		Game game = (Game) repository.findById(id);
+	public Game lookupMemberById(@PathParam("id") Long id)
+			throws ClassNotFoundException {
+		Game game;
+		game = repository.retrieve(id);
 		if (game == null) {
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}
@@ -95,7 +97,7 @@ public class GameRESTService {
 			// Validates member using bean validation
 			validateMember(game);
 
-			repository.save(game);
+			repository.create(game);
 
 			// Create an "ok" response
 			builder = Response.ok();

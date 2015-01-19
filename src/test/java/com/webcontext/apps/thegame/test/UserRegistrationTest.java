@@ -10,28 +10,23 @@ import javax.validation.ConstraintViolationException;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.webcontext.apps.thegame.model.User;
 import com.webcontext.apps.thegame.service.UserRegistration;
-import com.webcontext.apps.thegame.util.Resources;
 
+/**
+ * Unit test class to unit test the UserRegistration service.
+ * 
+ * @author Frédéric Delorme<frederic.delorme@web-context.com>
+ *
+ */
 @RunWith(Arquillian.class)
-public class UserRegistrationTest {
+public class UserRegistrationTest extends BasicUnitTest {
 	@Deployment
 	public static Archive<?> createTestArchive() {
-		return ShrinkWrap
-				.create(WebArchive.class, "test.war")
-				.addClasses(User.class, UserRegistration.class, Resources.class)
-				.addAsResource("META-INF/test-persistence.xml",
-						"META-INF/persistence.xml")
-				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-				// Deploy our test datasource
-				.addAsWebInfResource("test-ds.xml");
+		return createTestArchive();
 	}
 
 	@Inject
