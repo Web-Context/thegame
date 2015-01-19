@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="thegame">
 <head>
-	<title>TheGame</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<!--link rel="stylesheet" href="css/screen.css" type="text/css" / -->
-	<!-- Load angularjs -->
-	<script src="js/libs/angular.js"></script>
-	<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
-	<script src="js/libs/angular-resource.js"></script>
-	<!-- Load Bootstrap -->
-	<script src="js/libs/bootstrap.js"></script>
-	<!-- Load the controllers for our app -->
-	<script src="js/controllers.js"></script>
-	<!-- Load the application wide JS, such as route definitions -->
-	<script src="js/app.js"></script>
-	<!-- Load the services we have defined for the application, particularly the REST services -->
-	<script src="js/services.js"></script>
+<title>The Game</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" />
+<!-- Load angularjs -->
+<script src="js/libs/angular.js"></script>
+<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+<script src="js/libs/angular-resource.js"></script>
+<!-- Load Bootstrap -->
+<script src="js/libs/bootstrap.js"></script>
 
 </head>
 <body>
-	<header class="header">
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		        <img alt="Brand small" src="images/webcontext_logo.png">
-				<h2>TheGame</h2>
-		      </a>
-		    </div>
-		  </div>
+	<header class="page-header">
+		<h1>The Game</h1>
+		<nav class="header">
+			<ul>
+				<li><a href="#/home">Games</a></li>
+				<li><a href="#/users">Users</a></li>
+			</ul>
 		</nav>
 	</header>
-	<div id="content" class="container" ng-view>
-		[Template content will be inserted here]
-	</div>
-	<footer class="footer">
+	<div id="content" class="container" ng-view>[Template content
+		will be inserted here]</div>
+	<footer id="footer" class="page-footer">
 		<p>&copy; 2015 Frédéric Delorme - web-context.com - DaAppsFactory</p>
 	</footer>
 </body>
+<!-- Load the controllers for our app -->
+<script src="js/controllers/homeController.js"></script>
+<script src="js/controllers/userController.js"></script>
+<!-- Load the application wide JS, such as route definitions -->
+<script src="js/app.js"></script>
+<!-- Load the services we have defined for the application, particularly the REST services -->
+<script src="js/services/usersService.js"></script>
+<script src="js/services/gamesService.js"></script>
 </html>

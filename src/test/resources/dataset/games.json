@@ -1,0 +1,46 @@
+{
+	"game": [
+	    {
+	        "id": "0",
+	        "title": "Watch Dogs",
+	        "header": "All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what's happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it\u2019s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems.",
+	        "content": "All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what's happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it\u2019s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems.",
+	        "cover": "http://ecx.images-amazon.com/images/I/91kXsI0XkFL._SL240_.jpg",
+	        "studio": "Ubisoft Montreal",
+	        "editor": "Ubisoft",
+	        "publisher": "Ubisoft",
+	        "publishedAt": "2014-05-27 00:00:00",
+	        "tags": "gtalike,adventure,action,openworld",
+	        "platform": "X360",
+	        "platforms": "PC,PS3,PS4,X360,XONE,WiiU",
+	        "bulletplus": "1,2,3,4",
+	        "bulletminus": "1,2,3,4",
+	        "rate": 17,
+	        "rated": "+18",
+	        "rates": "{'feeling': 18,'gfx': 18,'music': 16,'sound': 15}",
+	        "createdAt": "2015-01-13 00:00:00",
+	        "createdBy" : "McGivrer"
+	    },
+	    {
+	        "id": "1",
+	        "title": "Tomb Raider",
+	        "header": "Come, young adventurer. Or, if you remember the original Tomb Raider games: come, adventurer. Down the narrow passage, through the great stone doorway, into the torchlit chamber. Tread with reverence, for this is the final resting place of gaming's fallen heroes.",
+	        "content": "The game is set on a mysterious island, populated by mysterious inhabitants and peppered with mysterious caves, mysterious tombs, mysterious artefacts and mysterious crates. Lara finds herself shipwrecked, without much more than a Kendal mint cake and a load of mutilated corpses for company.<br/>The first hour of play is pretty depressing. It's also embarrassing, unless you have thick walls or neighbours who will regard the noise as adding ambience to the violent pornographic film they're making. When Lara's not screaming, shrieking, panting or squealing, she's busy getting chased, groped and tied up. When she dies, it's with the kind of orgasmic groan that would make Ben Dover demand another take that's less over-the-top.",
+	        "cover": "http://ecx.images-amazon.com/images/I/91d3g549m7L._SL240_.jpg",
+	        "studio": "Crystal Dynamics",
+	        "editor": "Square Enix",
+	        "publisher": "Square Enix",
+	        "publishedAt": "2013-03-05 00:00:00",
+	        "platform": "X360",
+	        "platforms": "PC,PS3,PS4,X360,XONE,WiiU",
+	        "tags": "adventure,action",
+	        "bulletplus": "1,2,3,4",
+	        "bulletminus": "1,2,3,4",
+	        "rate": 17,
+	        "rated": "+18",
+	        "rates": "{'feeling': 18,'gfx': 18,'music': 16,'sound': 15}",
+	        "createdAt": "2015-01-13 00:00:00",
+	        "createdBy" : "McGivrer"
+	    }
+	]
+}
