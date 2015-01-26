@@ -75,8 +75,9 @@ public class UserRESTService {
 	@GET
 	@Path("/{id:[0-9][0-9]*}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public User lookupMemberById(@PathParam("id") long id) {
-		User user = repository.findById(id);
+	public User lookupMemberById(@PathParam("id") long id)
+			throws ClassNotFoundException {
+		User user = repository.retrieve(id);
 		if (user == null) {
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}

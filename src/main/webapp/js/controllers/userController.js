@@ -1,4 +1,6 @@
-function UsersCtrl($scope, $http, Users) {
+'use strict';
+angular.module('theGameApp')
+	.controller('UsersCtrl',['$scope','$http','Users',function($scope, $http, Users) {
 
     // Define a refresh function, that updates the data from the REST service
     $scope.refresh = function() {
@@ -49,4 +51,4 @@ function UsersCtrl($scope, $http, Users) {
 
     // Set the default orderBy to the name property
     $scope.orderBy = 'name';
-}
+}]);

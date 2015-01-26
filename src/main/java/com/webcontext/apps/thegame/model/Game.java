@@ -70,7 +70,7 @@ public class Game {
 	private String editor;
 	@Size(min = 0, max = 255)
 	private String publisher;
-
+ 
 	/*--- Tags ---*/
 	private String tags;
 	

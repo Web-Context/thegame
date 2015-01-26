@@ -9,10 +9,10 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local('Righteous'), local('Righteous-Regular'),
-		url(https://fonts.gstatic.com/s/righteous/v5/eJYqrhUff1n1Ge9A-rSw_BJtnKITppOI_IvcXXDNrsc.woff2)
-		format('woff2');
+	url(https://fonts.gstatic.com/s/righteous/v5/eJYqrhUff1n1Ge9A-rSw_BJtnKITppOI_IvcXXDNrsc.woff2)
+	format('woff2');
 	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF,
-		U+2C60-2C7F, U+A720-A7FF;
+	U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
@@ -20,10 +20,10 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local('Righteous'), local('Righteous-Regular'),
-		url(https://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XRJtnKITppOI_IvcXXDNrsc.woff2)
-		format('woff2');
+	url(https://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XRJtnKITppOI_IvcXXDNrsc.woff2)
+	format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
-		U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+	U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 html>* {
@@ -147,7 +147,6 @@ article.game {
 	padding: 2% 4%;
 	width: 90%;
 }
-
 article.game img.cover {
 	float: left;
 	border: 4px solid #ddd;
@@ -156,36 +155,34 @@ article.game img.cover {
 	width: 160px;
 	height: 240px;
 }
-
 article.game div.header {
 	background-color: #ddd;
 	padding: 10px 20px;
 	border: 1px solid #aaa;
 	min-height: 80px;
 }
-
 article.game div.header p {
 	font-style: italic;
 }
-
-article.game h1, article.game h2, article.game div.note {
+article.game h1, 
+article.game h2, 
+article.game div.note {
 	font-family: Righteous;
 	font-variant: normal;
 }
-
-article.game h1:before, article.game h2:before, section.games h1:before,
-	section.games h2:before {
+article.game h1:before, 
+article.game h2:before, 
+section.games h1:before,
+section.games h2:before {
 	padding: 0px;
 	margin: 0px;
 	content: "";
 }
-
 article.game h1 {
 	font-size: 24pt;
 	padding: 0px;
 	margin: 0px;
 }
-
 article.game h2 {
 	font-size: 18pt;
 }
@@ -224,7 +221,8 @@ article.game div.header img.cover {
 	margin-left: 0px;
 }
 
-article.game div, article.game p {
+article.game div, 
+article.game p {
 	text-align: justify;
 }
 
@@ -273,7 +271,6 @@ article.game div.header p.author {
 article.game div.body {
 	padding: 10px 0px;
 }
-
 article.game div.note {
 	float: right;
 	text-align: center;
@@ -287,13 +284,11 @@ article.game div.note {
 	margin-top: 10px;
 	margin-right: 0px;
 }
-
 article.game div.swing {
 	padding: 10px 20px;
 	margin: 0px;
 	padding: 0px;
 }
-
 article.game div.swing div.pad {
 	width: 42%;
 	padding: 20px;

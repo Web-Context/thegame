@@ -3,6 +3,7 @@ package com.webcontext.apps.thegame.util;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -78,8 +79,13 @@ public class FileIO {
 	 * @throws IOException
 	 */
 	public static String fastRead(String file) throws IOException {
-		String fullPath = FileIO.class.getResource("/file").getPath();
-		Path filePath = new File(fullPath).toPath();
+
+		URL resourceURL1 = Thread.currentThread().getContextClassLoader()
+				.getResource("/");
+
+		String fullPath = FileIO.class.getClassLoader().getResource("/")
+				.getPath();
+		Path filePath = new File(fullPath + file).toPath();
 		return new String(Files.readAllBytes(filePath));
 	}
 }

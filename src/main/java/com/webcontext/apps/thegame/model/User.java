@@ -46,15 +46,23 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "GAMEUSERS", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User implements Serializable {
 
-	@Id
+	@Id 
 	@GeneratedValue
 	private Long id;
 
 	@NotNull
 	@Size(min = 1, max = 25)
 	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
-	private String name;
+	private String username;
 
+	@Size(min = 1, max = 40)
+	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
+	private String firstname;
+
+	@Size(min = 1, max = 40)
+	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
+	private String lastname;
+	
 	@NotNull
 	@Size(min = 8, max = 25)
 	private String password;
@@ -78,12 +86,40 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String name) {
+		this.username = name;
+	}
+
+	/**
+	 * @return the firstname
+	 */
+	public String getFirstname() {
+		return firstname;
+	}
+
+	/**
+	 * @param firstname the firstname to set
+	 */
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	/**
+	 * @return the lastname
+	 */
+	public String getLastname() {
+		return lastname;
+	}
+
+	/**
+	 * @param lastname the lastname to set
+	 */
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	/**
@@ -117,9 +153,7 @@ public class User implements Serializable {
 		this.phoneNumber = phoneNumber;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
+	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -128,8 +162,12 @@ public class User implements Serializable {
 		builder.append("User [");
 		if (id != null)
 			builder.append("id=").append(id).append(", ");
-		if (name != null)
-			builder.append("name=").append(name).append(", ");
+		if (username != null)
+			builder.append("username=").append(username).append(", ");
+		if (firstname != null)
+			builder.append("firstname=").append(firstname).append(", ");
+		if (lastname != null)
+			builder.append("lastname=").append(lastname).append(", ");
 		if (password != null)
 			builder.append("password=").append(password).append(", ");
 		if (email != null)
@@ -139,5 +177,6 @@ public class User implements Serializable {
 		builder.append("]");
 		return builder.toString();
 	}
+
 
 }

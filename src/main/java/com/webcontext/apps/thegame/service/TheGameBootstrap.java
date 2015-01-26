@@ -1,5 +1,7 @@
 package com.webcontext.apps.thegame.service;
 
+import java.util.Properties;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -18,15 +20,17 @@ public class TheGameBootstrap {
 	@Inject
 	GameRepository games;
 
+	private static Properties settings;
+
 	@PostConstruct
 	public void initialize() {
 
 		if (games.count() == 0) {
 			try {
-				games.loadObjectFromJSONFile("dataset/games.json", true);
+				//games.loadObjectFromJSONFile("dataset/games.json", true);
 
 			} catch (Exception e) {
-				logger.error("Unable to read data from games.json file.");
+				logger.error("Unable to read data from games.json file.", e);
 			}
 
 		}

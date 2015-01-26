@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="thegame">
+<html lang="en" ng-app="theGameApp">
 <head>
 <title>The Game</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,6 +26,15 @@
 					title="{{item.title}}">{{item.name}}</a></li>
 			</ul>
 		</nav>
+		<div class="profile">
+			<img src="{{user.avatar}}" class="avatar"
+				alt="Avatar of {{user.username}}" /> <span class="username">{{user.username}}</span>
+			<span class="realname">{{user.firstname}} {{user.lastname}}</span>
+			<ul>
+				<li><a href="#/profile" accesskey="P">Profile</a></li>
+				<li><a href="#/logout" accesskey="L">Logout</a></li>
+			</ul>
+		</div>
 	</div>
 	<div id="content" class="container" ng-view>[Template content
 		will be inserted here]</div>
@@ -33,13 +42,14 @@
 		<p>&copy; 2015 Frédéric Delorme - web-context.com - DaAppsFactory</p>
 	</div>
 </body>
-<!-- Load the controllers for our app -->
-<script src="js/controllers/menuController.js"></script>
-<script src="js/controllers/gameController.js"></script>
-<script src="js/controllers/userController.js"></script>
 <!-- Load the application wide JS, such as route definitions -->
 <script src="js/app.js"></script>
 <!-- Load the services we have defined for the application, particularly the REST services -->
 <script src="js/services/usersService.js"></script>
 <script src="js/services/gamesService.js"></script>
+<!-- Load the controllers for our app -->
+<script src="js/controllers/gameController.js"></script>
+<script src="js/controllers/gameDetailsController.js"></script>
+<script src="js/controllers/menuController.js"></script>
+<script src="js/controllers/userController.js"></script>
 </html>

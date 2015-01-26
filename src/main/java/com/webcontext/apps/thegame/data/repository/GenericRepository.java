@@ -2,6 +2,8 @@ package com.webcontext.apps.thegame.data.repository;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -96,32 +98,6 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 	}
 
 	/**
-	 * Read the T object list from a JSON file name <code>filePath</code>, and
-	 * if <code>storeToDabase</code> is true, store loaded object to
-	 * corresponding entity.
-	 * 
-	 * @param filePath
-	 *            the JSON file to be read and parsed to produce a
-	 *            <code>List<T></code> objects.
-	 * @param storeToDatabase
-	 *            a flag set to true if you need to store data from
-	 *            <code>filePath</code> to database.
-	 * @return return a list of T object as a <code>list<T></code>.
-	 * @throws Exception
-	 */
-	public List<T> loadObjectFromJSONFile(String filePath,
-			boolean storeToDatabase) throws Exception {
-		String json = FileIO.fastRead(filePath);
-		TypeToken<List<T>> token = new TypeToken<List<T>>() {
-		};
-		List<T> list = gson.fromJson(json, token.getType());
-		for (T entity : list) {
-			this.create(entity);
-		}
-		return list;
-	}
-
-	/**
 	 * Count the number of entities <T> in database.
 	 * 
 	 * @return
@@ -137,6 +113,43 @@ public class GenericRepository<T, PK> implements IRepository<T, PK> {
 			e.printStackTrace();
 		}
 		return em.createQuery(cq).getSingleResult();
+	}
+
+	/**
+	 * Read the T object list from a JSON file name <code>filePath</code>, and
+	 * if <code>storeToDabase</code> is true, store loaded object to
+	 * corresponding entity.
+	 * 
+	 * @param filePath
+	 *            the JSON file to be read and parsed to produce a
+	 *            <code>List<T></code> objects.
+	 * @param storeToDatabase
+	 *            a flag set to true if you need to store data from
+	 *            <code>filePath</code> to database.
+	 * @return return a list of T object as a <code>list<T></code>.
+	 * @throws Exception
+	 */
+	public List<T> loadObjectFromJSONFile(String filePath,
+			boolean storeToDatabase) throws Exception {
+		URL path = Thread.currentThread().getContextClassLoader()
+				.getResource("/");
+		System.out.println("dataset path"+path.getPath());
+		String json = FileIO.fastRead(filePath);
+		/*
+		 * TypeToken<List<T>> token = new TypeToken<List<T>>() { }; List<T> list
+		 * = gson.fromJson(json, token.getType()); for (T entity : list) {
+		 * this.create(entity); }
+		 */
+		ArrayList<T> list = gson.fromJson(json, new TypeToken<ArrayList<T>>() {
+		}.getType());
+		for (int i = 0, size = list.size(); i < size; i++) {
+			T entity = gson.fromJson(gson.toJson(list.get(i)),
+					getGenericClass());
+			update(entity);
+			list.set(i, entity);
+		}
+
+		return list;
 	}
 
 }
