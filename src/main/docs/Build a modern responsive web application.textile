@@ -6,6 +6,8 @@ p(author). Created by "Frédéric Delorme":mailto:frederic.delorme@web-context.c
 
 h1. Preface
 
+... _*TODO* find a smart guy to write a beautiful preface ;)_ ...
+
 h1. Author
 
 Frédéric Delorme A.K.A. McGiver on most of the social networks, is a web develpper, and a "Web-techno-evangelist". 
@@ -14,11 +16,13 @@ For the last year, he is workong for one of the most motivating project in one o
 
 He tries and does his best as a software architect to help a 15 peoples dev team working on the cloud transformation of a sharp edge software, fighting for patient health.
 
-Rowing on computers for 18 years, with multiple languages and responsibilities, he starts with some old Pacal and C, and move to ythe internet woith PHP, Ruby, Python, and for 10 years now, with Java.
+Rowing on computers for 18 years, with multiple languages and responsibilities, he starts with some old Pacal and C, and move to the internet woith PHP, Ruby, Python, and for 10 years now, with Java.
 
 h1. Copyright
 
-h1. And then, he build a web app !
+... _TODO_ ...
+
+h1. And then, he builds a web app !
 
 You want to build an easy app adapted to all the web devices, and without maintaing multiple sources codes for multiple devices ?
 
@@ -32,12 +36,11 @@ Yes, HTML5 and CSS3 are (now?) web standard, and a too widely opened ones !
 
 Too much things are offered to any implementor and each party can implements its own specific extensions with just a magical pre-magical-word.
 
-
 h2. The frameworks
 
 As said in the previous paragraph, we need to furbish our web weapons to build robust and maintainable applications. And we will furbish these at multiple levels:
 
-* At structuration level,
+* At structured level,
 * At logical level,
 * At rendering level.
 
@@ -58,8 +61,6 @@ h3. Logic and mechanic
 Let's have a look to the Google web framework MVC(Model - View - Controller) oriented, I mean "AngularJS":http://angularjs.org/.
 
 AngularJS is not exactly a MVC framework, buit one of this deviant technology: MVVM(Model View View Model), meaning that any modification on the model side is pushed to the Viewside, and any modification to the view is pulledback to the Model.
-
-
 
 h2. The tools
 
@@ -86,8 +87,16 @@ As soon as you have installed NodeJS platforma, performs the following operation
 
 bc(console). $> node --version && npm --version
 
+If installation if ok, you will get the following output messages:
+
+bc(console). $> node --version && npm --version
+v0.10.24
+1.3.21  
+
+We will be ready to go to next step by creating a first application.
+
 bq(info). *INFO*
-Don't forget to verify the Node verison, it must be equal to or greater than 0.10.x.
+Don't forget to verify the Node version, it must be equal to or greater than 0.10.x.
 
 To satisfy to the well known dependencies loop, you must instal its private toolset:
 
@@ -104,7 +113,7 @@ OK, now we have a good platform and a ready to go generator tool.
 
 Go and use the NPM (Node Package Manager tool) to install such templates:
 
-bc(console). npm install --global generator-angular@0.9.2
+bc(console). $> npm install --global generator-angular@0.9.2
 
 (this command is extracted from the official Yeoman installation tutorial page).
 
@@ -118,24 +127,23 @@ bc(console). $> yo
 
 Please select "Run the Angular generator" item in the proposed list.
 
-!(shadow)images/yeoman-1-create-angular.jpg(step 1 - create the empty angular web app container)!
+p(shadow center). !images/yeoman-1-create-angular.jpg(step 1 - create the empty angular web app container)!
 
 p(figure). Create the empty angular web app container.
 
 And after validating the Anguar generator :
 
-!(shadow)images/yeoman-1-create-angular-3.jpg(step 2 - Answering basic questions about components)!
+p(shadow center). !(shadow)images/yeoman-1-create-angular-3.jpg(step 2 - Answering basic questions about components)!
 
-p(figure). Answering basic questions about components.
+p(figure ). Answering basic questions about components.
 
 Now validate with an [ENTER] key input.
 
-some "unanderstandable-for-basic-human" messages fill the scrolling console:
+Some "unanderstandable-for-basic-human" messages fill the scrolling console:
 
-!(shadow)images/yeoman-1-create-angular-4.jpg(step 3 - Logging big Operations)!
+p(shadow center). !(shadow)images/yeoman-1-create-angular-4.jpg(step 3 - Logging big Operations)!
 
 p(figure). Logging big Operations !
-
 
 h4. Adding some controller
 
@@ -143,19 +151,160 @@ Relying on the brand new angular generator, we an easily add an angular controll
 
 bc(console). $> yo angular:controller TheGame   
 
-h4. for more information
-
-please to go further on this tool, go an visit the well written and efficient "tutorial":http://yeoman.io/codelab.html on the Yeoman web site.
+bq(info). *More information*
+Please to go further on this tool, go an visit the well written and efficient "tutorial":http://yeoman.io/codelab.html on the Yeoman web site.
 
 h3(#grunt). Grunt
 
+The @grunt@ command line tool is the easy way to build and run the  front end application just created.
+
+bc(console). $> grunt --force
+
+and start the grunt server to test your application:
+
+bq(info). *TIPS*
+the @--force@  parameter force (sic) the runt compilator to go to the end of process even if there is some error.
+
+bc(console). $> grunt serve
+
+After a while, got and navigate to "http://localhost:9000/":http://localhost:8000/.
+
+p(shadow center). !images/yeoman-1-create-angular-5.jpg(This is your first application with Yeoman !)!
+
+p(figure). This is your first application with Yeoman !
+
+And now, you can develop your files while editing and running this Node.JS embedded web server to design front-end !
+
+
+Have a try ?
+
+bc(console). [youreditor] ./ &
+
+and modify the file @app/views/about.html@ :
+
+bc(html). <p>This my Modification</p>
+<ul>
+	<li ng-repeat="item in awesomeThings">
+		{{item}}
+	</li>
+</ul>
+
+p(figure). Code for the about.html view, visualizing modification live !
+
+Then in your just opened browser window, click on the "About link":http://localhost:9000/#/about you can see the live changes : the list of $scope.awesoeThings from the @scripts/controllers/about.js@ controller is now displayed with the template modification.
+
+p(shadow center). !images/yeoman-1-create-angular-6.jpg(Live modifications !)!
+
+p(figure). This is your first application with Yeoman !
+
+Ok, on the [_1_] placeholder, you can see the resulting of the @ng-repeat@ angular directive usage, please see the official pages about "angular directives":https://docs.angularjs.org/api/ng/directive/ngRepeat.
+
+
+
+
 h3(#bower). Bower
 
-h3. Node.JS
+And now, if we have a look at bower, we can edit the file named @[myapp]/bower.json@. It's the file used to manager javascript dependencies. grunt task maintains this list items and bower download and install such dependencies to the @[myapp]/bower_components/@ path.
 
-h2. The workbench
+edit the file and discover some answer to question from the begining :
+
+bc(javascrit). {
+  "name": "webapp-grunt",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.3.0",
+    "json3": "^3.3.0",
+    "es5-shim": "^4.0.0",
+    "bootstrap-sass-official": "^3.2.0",
+    "angular-animate": "^1.3.0",
+    "angular-cookies": "^1.3.0",
+    "angular-resource": "^1.3.0",
+    "angular-route": "^1.3.0",
+    "angular-sanitize": "^1.3.0",
+    "angular-touch": "^1.3.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.0",
+    "angular-scenario": "~1.3.0"
+  },
+  "appPath": "app"
+}
+
+There is 4 importants things in this file:
+
+# **name** is the name of the application,
+# **version** the current version of this release,
+# **dependencies** lists all javascript librariries needed at runtime,
+# **devDependencies*** lists the javascript needed during dev phase.
+
+You can see that the grunt/bower task will install and package the @1.3.0+@ version of the @angular@ library.
+
+h3. Adding a javacript dependency
+
+If you need a new javascript librabry, bower tool is your friend. Like Maven (hello java afficionados !), bower manage version and dependencies for javascript libraries.
+
+searching for some bootstrap tooltip ?
+
+bc(console). $> bower search bootstrap-tooltip 
+
+h2. Summary
 
 "Yeoman":http://yeoman.io, "grunt":http:// and "bower":http:// are the three fingers of the hand (??) links to build web apps.
+
+p(shadow center). !http://yeoman.io/assets/img/workflow.c3cc.jpg(The infernal triple friends to build modern web app)!
+
+p(figure). Image courtesy immported from the official "Yeoman.io":http://yeoman.io site
+
+h1. Start hand crafting Front-end !
+
+Ok,now we have a full case of great web tools, we can start building our application. 
+
+On any web application, the first thing we need are users. ok, so let's try and build some basic user management process.
+
+but before diving in the code, we need to write some basic use cases. And to be able to test such use cases, why not writig useful tests ?  (who said beuurrghhhlk ?).
+
+You know that writing code can be in all situation sexy ?
+
+I propose to you to use one of this sexy framework to describe your tests scenarii: "Cucumber":https://github.com/cucumber/cucumber/wiki/A-Table-Of-Content !
+
+So writing test become fun !
+
+please, let's see and discover a sexy tests scenarii for a login feature:
+
+bc(cucmber).. Feature: Login
+	As a Custommer
+	I want to be able to login
+	So that I can access to restrictived features
+
+	Scenario: unauthenticated User
+		Given I am on the login page
+		When I login
+		Then I should be logged in
+
+	Scenario: User who has not loggin for ages
+		Given I have not logged in for 7 years
+		And I am on the login page
+		When I login
+		Then I should see the welcome back message
+
+	Scenario: User who login with an unknown username
+		Given I am on the login page
+		When I login with aN unknown username
+		Then I should see the unknwon username message
+		And I am proposed to register with the register link 
+
+	Scenario: User input the wrong password
+		Given I am on the login page
+		When I login with wrong password
+		Then I should see the error password message
+		And I am proposed to reset my password with the reset link
+		
+p. Sexy no ?
+
+
+h2. Users management
+
+
 
 
 h1. Index

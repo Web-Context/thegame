@@ -1,0 +1,4 @@
+feature: Login
+	as a custommer
+	I want to be able to log in
+	So that I can access to restrictived features
