@@ -176,11 +176,7 @@ p(figure). This is your first application with Yeoman !
 And now, you can develop your files while editing and running this Node.JS embedded web server to design front-end !
 
 
-Have a try ?
-
-bc(console). [youreditor] ./ &
-
-and modify the file @app/views/about.html@ :
+Have a try and modify the file @app/views/about.html@ :
 
 bc(html). <p>This my Modification</p>
 <ul>

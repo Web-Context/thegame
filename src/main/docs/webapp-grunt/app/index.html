@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>The Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,21 +20,22 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="MainCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li id="home" class="active"><a ng-href="#">Home</a></li>
-          <li id="about" ><a ng-href="#/about">About</a></li>
-          <li id="users" ><a ng-href="#/users">Users</a></li>
-          <li id="contact"><a ng-href="#">Contact</a></li>
+          <li id="news" ><a ng-href="#/news" accesskey="P">News</a></li>
+          <li ng-if="user.profile=='admin'" id="users" ><a ng-href="#/admin/users" accesskey="U">Users</a></li>
+          <li ng-if="user.profile=='admin' && user.active" id="profile"><a ng-href="#/admin/profile" accesskey="P"><img src="{{user.avatar}}" class="avatar"/>&nbsp;{{user.username}}</a></li>
         </ul>
-        <h3 class="text-muted">webappGrunt</h3>
+
+        <h3 class="text-muted logo">The Game</h3>
       </div>
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><span class="glyphicon glyphicon-copy"></span> 2015 - Web-Context - <a href="mailto:contact@web-context.com?subject=feedback">@McGivrer</a></p>
       </div>
     </div>
 
@@ -74,8 +75,10 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/news.js"></script>
         <script src="scripts/controllers/user.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
+        <script src="scripts/controllers/newsread.js"></script>
         <!-- endbuild -->
 </body>
 </html>

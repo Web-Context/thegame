@@ -19,19 +19,27 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/news', {
+        templateUrl: 'views/news.html',
+        controller: 'NewsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/news/:id', {
+        templateUrl: 'views/newsread.html',
+        controller: 'NewsReadCtrl'
       })
-      .when('/users', {
-        templateUrl: 'views/user.html',
+      .when('/admin/users', {
+        templateUrl: 'views/admin/user.html',
         controller: 'UserCtrl'
       })
+      .when('/admin/profile', {
+        templateUrl: 'views/admin/profile.html',
+        controller: 'ProfileCtrl'
+      })
+      .when('/admin/profile/save', {
+        templateUrl: 'views/admin/profile.html',
+        controller: 'ProfileCtrl'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/news'
       });
   });

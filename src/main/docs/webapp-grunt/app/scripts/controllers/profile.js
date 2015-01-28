@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name webappGruntApp.controller:UserctrlCtrl
+ * @name webappGruntApp.controller:ProfileCtrl
  * @description
- * # UserctrlCtrl
+ * # ProfileCtrl
  * Controller of the webappGruntApp
  */
  angular.module('webappGruntApp')
- .controller('UserCtrl',['$scope','$http' ,function ($scope,$http) {
+ .controller('ProfileCtrl',['$scope','$routeParams','$http', function ($scope,$routeParams,$http) {
  	$http.get("rest/users.json").success(function(data,status,headers,config){
- 		$scope.users = data.users;
+ 		$scope.profile = data.users[1];
  	}).error(function(data,status,headers,config){
- 		alert("unable to retrieve data");
+ 		alert("unable to retrieve user details");
  	});
  }]);
