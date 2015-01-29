@@ -7,11 +7,10 @@
  * # UserctrlCtrl
  * Controller of the webappGruntApp
  */
- angular.module('webappGruntApp')
- .controller('UserCtrl',['$scope','$http' ,function ($scope,$http) {
- 	$http.get("rest/users.json").success(function(data,status,headers,config){
- 		$scope.users = data.users;
- 	}).error(function(data,status,headers,config){
- 		alert("unable to retrieve data");
- 	});
- }]);
+angular.module('webappGruntApp')
+	.controller('UserCtrl',['$scope','UserService' ,function ($scope,UserService) {
+
+		UserService.findAll(0,10).then(function(users){
+			$scope.users = users;
+		});
+	}]);

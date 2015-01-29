@@ -157,7 +157,9 @@ article.game {
     width:$cover-width*2.5;
   }
   .rates {
-    font-family: sans-serif;;
+    text-align: center;
+    font-family: Courier New;
+    font-size:9pt;
   }
   h3 {
     font-size:12pt;
@@ -261,6 +263,16 @@ section.news {
     div.info {
       margin-left:$cover-width + 20px;
     }
+  }
+}
+
+.profile {
+  .avatar {
+    width:64px;
+    height:64px;
+    border-radius:4px;
+    border:1px solid #000;
+    padding:2px;
   }
 }
 

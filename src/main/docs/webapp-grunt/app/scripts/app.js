@@ -20,12 +20,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/news', {
-        templateUrl: 'views/news.html',
-        controller: 'NewsCtrl'
+        templateUrl: 'views/games.html',
+        controller: 'GamesCtrl'
       })
       .when('/news/:id', {
-        templateUrl: 'views/newsread.html',
-        controller: 'NewsReadCtrl'
+        templateUrl: 'views/gameDetails.html',
+        controller: 'GameDeatilsCtrl'
       })
       .when('/admin/users', {
         templateUrl: 'views/admin/user.html',
