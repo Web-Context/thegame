@@ -9,6 +9,7 @@
 	<thead>
 		<th>number</th>
 		<th>active</th>
+		<th>avatar</th>
 		<th>Username</th>
 		<th>Firstname</th>
 		<th>Lastname</th>
@@ -19,6 +20,7 @@
 		<tr ng-repeat="user in users | filter:search">
 			<td>#{{user.id}}</td>
 			<td><input type="checkbox" value="{{user.active}}"></td>
+			<td><img src="{{user.avatar}}" class="avatar"></td>
 			<td>{{user.username}}</td>
 			<td>{{user.firstname}}</td>
 			<td>{{user.lastname}}</td>
