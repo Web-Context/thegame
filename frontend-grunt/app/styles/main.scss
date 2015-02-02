@@ -1,0 +1,304 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Righteous'), local('Righteous-Regular'),
+  url(https://fonts.gstatic.com/s/righteous/v5/eJYqrhUff1n1Ge9A-rSw_BJtnKITppOI_IvcXXDNrsc.woff2)
+  format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF,
+  U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Righteous'), local('Righteous-Regular'),
+  url(https://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XRJtnKITppOI_IvcXXDNrsc.woff2)
+  format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+  U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+.logo {
+  font-family:Righteous;
+  font-size:20pt;
+}
+img.logo {
+    width:48px;
+    height:48px;
+}
+h1, h2, h3 {   
+  font-family:Righteous;
+}
+
+h1.logo{
+  font-size:42pt;
+}
+.avatar{
+  box-shadow: 0.1em 0.1em 0.2em 0.1em #000 inset;
+  border-radius: 1em;
+  width:24px;
+  height:24px;
+  padding:0px;
+  margin:0px;
+}
+
+$cover-width: 60px;
+
+article.game {
+  div.rate {
+    float:right;
+    text-align: center;
+    font-weight:bold;
+    font-size: 2.2em;
+    margin:0px;
+    padding:0.0em;
+    margin-left:1em;
+    clear:right;
+    color:#000;
+    background-color:#fff;
+    border:thin solid #000;
+    //border-width: thick;
+    box-shadow: -2px 2px 4px #000;
+    width:2em;
+
+    p {
+      display:block;
+      font-variant: small-caps;
+      text-align:center;
+      margin:0px;
+      padding:0.15em 0.25em;
+      font-size:0.3em;
+      background-color:#000;
+      color:#fff;
+    }
+  }
+  img.cover {
+    float:left;
+    display:block;
+    box-shadow: 2px 2px 4px #000;
+    margin-right: $cover-width / 8;
+    margin-left: $cover-width / 8;
+  }
+  img.small {
+    width:$cover-width;
+  }
+  img.medium {
+    width:$cover-width*2;
+  }
+  img.big {
+    width:$cover-width*2.5;
+  }
+  .rates {
+    text-align: center;
+    font-family: Courier New;
+    font-size:9pt;
+  }
+  h3 {
+    font-size:12pt;
+  } 
+  div.game-header{
+    text-align:justify;
+    font-size:0.8em;
+    border:none;
+    margin:0px;
+    padding:1em;
+    margin-bottom:2em;
+  } 
+  div.game-content{
+    text-align:justify;
+    font-size:0.8em;
+    border:none;
+    margin:0px;
+    padding:0px;
+  } 
+  div.info{
+    margin-top:1em;
+    text-align:right;
+    font-size:0.6em;
+    padding:0.2em 0em;
+    border-top:1px dotted #666;
+  }
+
+  div.info ul.platforms {
+    display:inline;
+    list-style: none;
+    margin:0px;
+    padding:0px;
+    li {
+      display:inline-block;
+      color:navy;
+    }
+    li:before{
+      content:"."
+    }
+    li.active{
+      font-weight: bold;
+      color:red;
+    }
+  }
+  div.status {
+    margin-top:1em;
+    div {
+      width:49%;
+      min-height: 8em;
+      margin-bottom:1em;
+    }
+    div h1{
+      display:block;
+      text-align: center;
+      font-size:1.5em;
+      padding:0.1em;
+      margin:0px;
+      font-weight: bold;
+    }
+    div ul {
+      list-style: circle;
+      padding:1.5em;
+    }
+    div ul li {
+      padding-left:none;    
+    }
+    div.plus{
+      float:left;
+      background-color:#efe;
+      color:darkgreen;
+      h1{
+        color:darkgreen;
+        background-color:green;
+      }
+    }
+    div.minus{
+      float:right;
+      background-color:#fee;
+      color:darkred;
+      h1{
+        color:darkred;
+        background-color:red;
+      }
+    }
+    .clear{
+      clear:both;
+    }
+  }
+}
+
+section.news {
+  article.game {
+    div.game-header {
+      padding: 1em 0em;
+      margin:0px 0px;
+    }
+    h3,
+    div.game-header {
+      padding-left:$cover-width + 20px;
+    }
+    div.info {
+      margin-left:$cover-width + 20px;
+    }
+  }
+}
+
+.profile ,
+{
+  .avatar {
+    width:64px;
+    height:64px;
+    border-radius:4px;
+    border:1px solid #000;
+    padding:2px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

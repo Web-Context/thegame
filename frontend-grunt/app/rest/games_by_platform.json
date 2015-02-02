@@ -1,0 +1,32 @@
+{ 
+	"platforms":[
+		{	"title": "X360",
+		  	"games":[
+				{
+					"id": "1",
+					"title": "Watch Dogs"
+				},
+				{
+					"id": "2",
+					"title": "Tomb Raider"
+				}
+			]
+		},
+		{	"title":"WiiU",
+			"games":[
+				{
+					"id": "3",
+					"title": "New Super Mario Bros.U"
+				},
+				{
+					"id": "4",
+					"title": "Rayman Legends"
+				},
+				{
+					"id":"5",
+					"title": "Lego Le Hobbit"
+				}
+			]
+		}
+	]
+}

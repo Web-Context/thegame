@@ -1,0 +1,51 @@
+<form class="form-horizontal" action="#/admin/profile/save" method="get" accept-charset="utf-8" ng-controller="ProfileCtrl">
+	<h2>Administration / Profile</h2>
+  <div class="profile">
+    <img src="{{user.avatar}}" class="avatar left"/>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Email" value="{{user.email}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="password" placeholder="Password" value="{{user.password}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirm" class="col-sm-2 control-label">Password Confirmation</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" value="{{user.password}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstname" class="col-sm-2 control-label">Firstname</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="firstname" placeholder="Firstname" value="{{user.firstname}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastname" class="col-sm-2 control-label">Lastname</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastname" placeholder="Lastname" value="{{user.lastname}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="admin" value="{{user.profile=='admin'}}"> Administrator
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group info">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" accesskey="S">Save</button>
+        <button type="button" class="btn btn-default" accesskey="C">Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>

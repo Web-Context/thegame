@@ -1,0 +1,32 @@
+<h2>Administration / Users</h2>
+<table class="table">
+	<thead>
+		<th>number</th>
+		<th>active</th>
+		<th>Username</th>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Email</th>
+		<th>action</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="user in users">
+			<td>#{{user.id}}</td>
+			<td><input type="checkbox" value="{{user.active}}"></td>
+			<td>{{user.username}}</td>
+			<td>{{user.firstname}}</td>
+			<td>{{user.lastname}}</td>
+			<td>{{user.email}}</td>
+			<td>
+				<a class="button" href="#/admin/user/edit">edit</a>
+				<a class="button" href="#/admin/user/delete">delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btn-toolbar" role="toolbar">
+
+  <div class="previous" role=""><a href="#/admin/user/{{user.pager.previous}}">Previous</a></li>
+  <div class="next"><a href="#/admin/user/{{user.pager.next}}">Next</a></li>
+</div>
