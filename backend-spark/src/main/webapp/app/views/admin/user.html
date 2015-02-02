@@ -1,0 +1,19 @@
+<h2>Administration / Users</h2>
+<table class="table">
+	<thead>
+		<th>username</th>
+		<th>firstname</th>
+		<th>lastname</th>
+		<th>email</th>
+		<th>active</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="user in users">
+			<td>{{user.username}}</td>
+			<td>{{user.firstname}}</td>
+			<td>{{user.lastname}}</td>
+			<td>{{user.email}}</td>
+			<td>{{user.active}}</td>
+		</tr>
+	</tbody>
+</table>

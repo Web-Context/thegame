@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="theGameApp">
+<head>
+<title>The Game</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" />
+<!-- Load angularjs -->
+<script src="js/libs/angular.js"></script>
+<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+<script src="js/libs/angular-resource.js"></script>
+<!-- Load Bootstrap -->
+<script src="js/libs/bootstrap.js"></script>
+
+</head>
+<body class="page-content">
+	<div class="page-header" ng-controller="MenuCtrl">
+		<h1>
+			<a href="#/">TheGame</a>
+		</h1>
+		<nav class="menu">
+			<ul>
+				<li ng-repeat="item in menu.items"><a href="#/{{item.code}}"
+					title="{{item.title}}">{{item.name}}</a></li>
+			</ul>
+		</nav>
+		<div class="profile">
+			<img src="{{user.avatar}}" class="avatar"
+				alt="Avatar of {{user.username}}" /> <span class="username">{{user.username}}</span>
+			<span class="realname">{{user.firstname}} {{user.lastname}}</span>
+			<ul>
+				<li><a href="#/profile" accesskey="P">Profile</a></li>
+				<li><a href="#/logout" accesskey="L">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content" class="container" ng-view>[Template content
+		will be inserted here]</div>
+	<div class="page-footer">
+		<p>&copy; 2015 Frédéric Delorme - <a href="http://web-context.github.io" title="Visit our small web pages ?">web-context.com</a> - DaAppsFactory</p>
+	</div>
+</body>
+<!-- Load the application wide JS, such as route definitions -->
+<script src="js/app.js"></script>
+<!-- Load the services we have defined for the application, particularly the REST services -->
+<script src="js/services/userService.js"></script>
+<script src="js/services/gameService.js"></script>
+<!-- Load the controllers for our app -->
+<script src="js/controllers/gameController.js"></script>
+<script src="js/controllers/gameDetailsController.js"></script>
+<script src="js/controllers/menuController.js"></script>
+<script src="js/controllers/userController.js"></script>
+</html>

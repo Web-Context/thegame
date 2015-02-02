@@ -1,0 +1,27 @@
+<article class="game">
+	<div class="rate">{{game.rate}}<p>{{game.ratelabel}}</p></div>
+	<img class="cover medium" src="{{game.cover}}"><h1><a href="#/news/{{game.id}}" title="read full story for {{game.title}}">{{game.title}}</a></h1>
+	<div class="rates">gfx:[{{game.rates.gfx}}] sound:[{{game.rates.sound}}] music:[{{game.rates.music}}] feeling:[{{game.rates.feeling}}]</div>
+	<div class="info"><ul class="platforms"><li ng-repeat="pf in game.platforms">{{pf}}</li></ul> / {{game.createdBy}} / {{game.createdAt | date:'longDate'}}</div>
+	<div class="game-header bg-primary">
+		{{game.header}}
+	</div>
+	<div class="game-content">
+		{{game.content}}
+	</div>
+	<div class="status">
+		<div class="plus">
+			<h1>+</h1>
+			<ul>
+				<li ng-repeat="itemplus in game.plus">{{itemplus}}</li>
+			</ul>
+		</div>
+		<div class="minus">
+			<h1>-</h1>
+			<ul>
+				<li ng-repeat="itemminus in game.minus">{{itemminus}}</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</article>

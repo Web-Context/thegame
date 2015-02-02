@@ -1,0 +1,24 @@
+{
+	"users": [
+		{ 
+			"username"  : "admin",
+			"profile":"admin",
+			"password":"password",
+			"avatar":"https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s32-c/photo.jpg",
+			"firstname" : "Frédéric",
+			"lastname"  : "Delorme",
+			"email"     : "frederic.delorme@web-context.com",
+			"active"    : true
+		},
+		{
+			"username": "McGivrer",
+			"profile":"admin",
+			"password":"password",
+			"avatar":"https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s32-c/photo.jpg",
+			"firstname":"Frédéric",
+			"lastname":"Delorme",
+			"email":"contact@web-context.com",
+			"active":true
+		}
+	]
+}
