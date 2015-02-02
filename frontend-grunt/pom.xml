@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.webcontext.apps</groupId>
+	<artifactId>frontend-grunt</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>TheGameFrontEnd</name>
+	<description>Building a better Responsive Web application.
+		Here is a Frontend buidl with yeoman, grunt, bower and angularjs.</description>
+	<url>http://web-context.github.io/</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+	<inceptionYear>2015</inceptionYear>
+	<scm>
+		<url>http://bitbucket.org/webcontext/thegame</url>
+		<connection>git@bitbucket.org:webcontext/thegame.git</connection>
+		<developerConnection>git@bitbucket.org:webcontext/thegame.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<issueManagement>
+		<system>bitbucket.org</system>
+		<url>https://bitbucket.org/webcontext/thegame/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>travis-ci.org</system>
+	</ciManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>0.0.20</version>
+				<!--configuration><workingDirectory>./</workingDirectory></configuration-->
+				<executions>
+					<execution>
+						<!-- optional: you don't really need execution ids,
+					    but it looks nice in your build log. -->
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<!-- optional: default phase is "generate-resources" -->
+						<phase>generate-resources</phase>
+						<configuration>
+							<nodeVersion>v0.10.18</nodeVersion>
+							<npmVersion>1.3.8</npmVersion>
+							<!-- optional: where to download node and npm from. Defaults to http://nodejs.org/dist/ -->
+							<!--downloadRoot>http://myproxy.example.org/nodejs/dist/</downloadRoot-->
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<!-- optional: default phase is "generate-resources" -->
+						<phase>generate-resources</phase>
+						<configuration>
+							<!-- optional: The default argument is actually
+        "install", so unless you need to run some other npm command,
+        you can remove this whole <configuration>section.
+        -->
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>bower install</id>
+						<goals>
+							<goal>bower</goal>
+						</goals>
+						<configuration>
+							<!-- optional: The default argument is actually
+        "install", so unless you need to run some other bower command,
+        you can remove this whole <configuration>section.
+        -->
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>grunt build</id>
+						<goals>
+							<goal>grunt</goal>
+						</goals>
+						<!-- optional: the default phase is "generate-resources" -->
+						<phase>generate-resources</phase>
+						<configuration>
+							<!-- optional: if not specified, it will run Grunt's default
+        task (and you can remove this whole <configuration>section.) -->
+							<arguments>build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

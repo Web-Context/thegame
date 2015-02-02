@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.webcontext.apps</groupId>
-	<artifactId>thegame</artifactId>
+	<artifactId>thegame-javaee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>TheGame</name>
+	<name>TheGameJavaEE</name>
 	<description>a kickstarter application to marries JavaEE7 and AngularJS !</description>
 
 	<url>http://web-context.github.io/</url>
