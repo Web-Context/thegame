@@ -1,0 +1,50 @@
+<h2>Administration / Games</h2>
+<div class="form-group">
+  <label for="Search" class="col-sm-2 control-label">Search</label>
+  <div class="col-sm-10">
+    <input type="search" class="form-control" ng-model="search.title" placeholder="search">
+  </div>
+</div>
+<table class="table">
+	<thead>
+		<th>select</th>
+		<th>id</th>
+		<th>cover</th>
+		<th>title</th>
+		<th>platform</th>
+		<th>created At</th>
+		<th>Created By</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="game in games | filter:search">
+			<td><input type="checkbox" value="{{game.active}}"></td>
+			<td>#{{game.id}}</td>
+			<td><img src="{{game.cover}}" class="cover small"></td>
+			<td>{{game.title}}</td>
+			<td>{{game.platform}}</td>
+			<td>{{game.createdAt | date:'dd-MM-yyyy'}}</td>
+			<td>{{game.createdBy}}</td>
+			<td>
+				<a class="button" href="#/admin/game/edit">edit</a>
+				<a class="button" href="#/admin/game/delete">delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<nav>
+  <ul class="pagination">
+    <li class="disabled">
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#/admin/games/pager/1">1</a></li>
+    <li class="disabled">
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

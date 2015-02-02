@@ -17,9 +17,9 @@ A Short Java web project proposing multiple versoin of the same technical archit
 
 ## Back end
 
-* The `backend-javaee` is a mix of CDI, JPA and JAX-RS, to server a standard REST backend, build uppon the Kitchensink-angularjs project from the [Wildfly-quickstart](https://github.com/wildfly/quickstart/tree/master/kitchensink-angularjs).
+* The `thegame-javaee` is a mix of CDI, JPA and JAX-RS, to server a standard REST backend, build uppon the Kitchensink-angularjs project from the [Wildfly-quickstart](https://github.com/wildfly/quickstart/tree/master/kitchensink-angularjs).
 
-* The backend-spark is a low dependency foot print http server edition, to serve aplication as a single jar. It relies on the [SparkJava framework](http://sparkjava.com)
+* The `backend-spark` is a low dependency foot print http server edition, to serve aplication as a single jar. It relies on the [SparkJava framework](http://sparkjava.com)
 
 
 

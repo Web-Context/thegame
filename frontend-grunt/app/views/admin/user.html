@@ -1,4 +1,10 @@
 <h2>Administration / Users</h2>
+<div class="form-group">
+  <label for="Search" class="col-sm-2 control-label">Search</label>
+  <div class="col-sm-10">
+    <input type="search" class="form-control" ng-model="search" placeholder="search">
+  </div>
+</div>
 <table class="table">
 	<thead>
 		<th>number</th>
@@ -10,7 +16,7 @@
 		<th>action</th>
 	</thead>
 	<tbody>
-		<tr ng-repeat="user in users">
+		<tr ng-repeat="user in users | filter:search">
 			<td>#{{user.id}}</td>
 			<td><input type="checkbox" value="{{user.active}}"></td>
 			<td>{{user.username}}</td>
@@ -25,8 +31,7 @@
 	</tbody>
 </table>
 
-<div class="btn-toolbar" role="toolbar">
-
-  <div class="previous" role=""><a href="#/admin/user/{{user.pager.previous}}">Previous</a></li>
-  <div class="next"><a href="#/admin/user/{{user.pager.next}}">Next</a></li>
-</div>
+<ul class="btn-toolbar" role="toolbar">
+  <li class="previous" role=""><a href="#/admin/user/{{user.pager.previous}}">Previous</a></li>
+  <li class="next"><a href="#/admin/user/{{user.pager.next}}">Next</a></li>
+</ul>

@@ -39,9 +39,29 @@ angular
         templateUrl: 'views/gameDetails.html',
         controller: 'GameDetailsCtrl'
       })
+      .when('/games/edit/:id', {
+        templateUrl: 'views/gameDetails.html',
+        controller: 'GameDetailsCtrl'
+      })
+      .when('/games/delete/:id', {
+        templateUrl: 'views/gameDetails.html',
+        controller: 'GameDetailsCtrl'
+      })
       .when('/admin/users', {
         templateUrl: 'views/admin/user.html',
         controller: 'UserCtrl'
+      })
+      .when('/admin/user/edit', {
+        templateUrl: 'views/admin/profile.html',
+        controller: 'ProfileCtrl'
+      })
+      .when('/admin/user/delete', {
+        templateUrl: 'views/admin/profile.html',
+        controller: 'ProfileCtrl'
+      })
+      .when('/admin/profile', {
+        templateUrl: 'views/admin/profile.html',
+        controller: 'ProfileCtrl'
       })
       .when('/admin/profile', {
         templateUrl: 'views/admin/profile.html',
@@ -50,6 +70,10 @@ angular
       .when('/admin/profile/save', {
         templateUrl: 'views/admin/profile.html',
         controller: 'ProfileCtrl'
+      })
+      .when('/admin/games', {
+        templateUrl: 'views/admin/games.html',
+        controller: 'AdminGamesCtrl'
       })
       .otherwise({
         redirectTo: '/news'

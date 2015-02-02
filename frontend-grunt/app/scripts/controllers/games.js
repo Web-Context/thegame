@@ -9,7 +9,7 @@
  */
 angular.module('webappGruntApp')
   .controller('GamesCtrl', ['$scope','GameService',function ($scope,GameService) {
-    GameService.findLast(0,5).then(function(games){
+    GameService.findAll(0,5).then(function(games){
         $scope.articles = games;
     });
   }]);

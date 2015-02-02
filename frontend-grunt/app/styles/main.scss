@@ -151,7 +151,7 @@ article.game {
     margin-left: $cover-width / 8;
   }
   img.small {
-    width:$cover-width;
+    width:$cover-width / 4;
   }
   img.medium {
     width:$cover-width*2;
@@ -269,8 +269,11 @@ section.news {
   }
 }
 
-.profile ,
-{
+img.small {
+  width:$cover-width /2;
+}
+
+.profile {
   .avatar {
     width:64px;
     height:64px;
@@ -279,6 +282,8 @@ section.news {
     padding:2px;
   }
 }
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

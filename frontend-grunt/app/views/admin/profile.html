@@ -1,4 +1,4 @@
-<form class="form-horizontal" action="#/admin/profile/save" method="get" accept-charset="utf-8" ng-controller="ProfileCtrl">
+<form id="user.profile" class="form-horizontal" method="get" accept-charset="utf-8" ng-controller="ProfileCtrl">
 	<h2>Administration / Profile</h2>
   <div class="profile">
     <img src="{{user.avatar}}" class="avatar left"/>
@@ -36,16 +36,21 @@
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
           <label>
-            <input type="checkbox" name="admin" value="{{user.profile=='admin'}}"> Administrator
+            <input type="checkbox" name="admin" value="{{user.profile=='admin'?'checlked':''}}"> Administrator
           </label>
         </div>
       </div>
     </div>
     <div class="form-group info">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary" accesskey="S">Save</button>
-        <button type="button" class="btn btn-default" accesskey="C">Cancel</button>
+        <button id="save" type="submit" class="btn btn-primary" accesskey="S">Save</button>
+        <button id="cancel" type="button" class="btn btn-default" accesskey="C">Cancel</button>
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+  $('user.profile button.save').click(function(){
+    alert("save profile");
+  });
+  </script>
 </form>
