@@ -1,0 +1,40 @@
+{
+	"platforms":[
+		{
+			"code":"x360",
+			"name":"XBox 360",
+			"shortname":"X360",
+			"manufacturer":"Microsoft"
+		},
+		{
+			"code":"xone",
+			"name":"XBox One",
+			"shortname":"XOne",
+			"manufacturer":"Microsoft"
+		},
+		{
+			"code":"ps3",
+			"name":"Playstation 3",
+			"shortname":"PS3",
+			"manufacturer":"Sony Computer Entertainment"
+		},
+		{
+			"code":"ps4",
+			"name":"Playstation 4",
+			"shortname":"PS4",
+			"manufacturer":"Sony Computer Entertainment"
+		},
+		{
+			"code":"wii",
+			"name":"Nintendo Wii",
+			"shortname":"Wii",
+			"manufacturer":"Nintendo Ltd."
+		},
+		{
+			"code":"wiiu",
+			"name":"Nintendo WiiU",
+			"shortname":"WiiU",
+			"manufacturer":"Nintendo Ltd."
+		}
+	]
+}

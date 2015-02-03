@@ -27,10 +27,15 @@
               <img src="{{user.avatar}}" class="avatar"/>{{user.username}}
               <span class="caret"></span></button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation" class="dropdown-header">Administration</li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/games">Games</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/platforms">Platforms</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/users">Users</a></li>
                 <li role="presentation" class="divider"></li>
+                <li role="presentation" class="dropdown-header">User</li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/profile">Profile</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#/user/logout">Logout</a></li>
               </ul>
             </div>
         <h3 class="text-muted"><img src="images/the_game_logo_1.png" class="logo">The Game</h3>
@@ -91,17 +96,21 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/games.js"></script>
-        <script src="scripts/controllers/user.js"></script>
-        <script src="scripts/controllers/profile.js"></script>
-        <script src="scripts/controllers/gameDetails.js"></script>
-        <script src="scripts/services/gameService.js"></script>
-        <script src="scripts/services/userService.js"></script>
-        <script src="scripts/controllers/footer.js"></script>
-        <script src="scripts/controllers/admin/games.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/games.js"></script>
+    <script src="scripts/controllers/platforms.js"></script>
+    <script src="scripts/controllers/tests.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <script src="scripts/controllers/gameDetails.js"></script>
+    <script src="scripts/controllers/footer.js"></script>
+    <script src="scripts/controllers/admin/games.js"></script>
+    <script src="scripts/controllers/admin/platforms.js"></script>
+    <script src="scripts/controllers/admin/users.js"></script>
+    <script src="scripts/services/gameService.js"></script>
+    <script src="scripts/services/platformService.js"></script>
+    <script src="scripts/services/userService.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

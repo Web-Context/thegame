@@ -46,11 +46,7 @@ function evaluateRate(rate){
  */
 function transformGame(games){
   games.forEach(function(item){
-    item.plus      = item.plus.split(",");
-    item.minus     = item.minus.split(",");
-    item.platforms = item.platforms.split(",");
-    item.createdAt = new Date(item.createdAt);
-    item.publishedAt = new Date(item.publishedAt);
+    item = decorateGame(item);
   });
   return games;
 }
@@ -62,6 +58,11 @@ function transformGame(games){
  */
 function extractGame(games, id){
   var game = games[id-1];
+
+  return decorateGame(game);
+}
+
+function decorateGame(game){
   game.minus         = game.minus.split(",");
   game.plus          = game.plus.split(",");
   game.platforms     = game.platforms.split(",");
@@ -96,17 +97,9 @@ angular.module('webappGruntApp')
       findLast : function(size){
         return $http.get('rest/games.json',{pageSize:size})
           .then(function (response) {
-            /*var games = response.data.games;
-            games.forEach(function(item){
-                item.plus      = item.plus.split(",");
-                item.minus     = item.minus.split(",");
-                item.platforms = item.platforms.split(",");
-                item.createdAt = new Date(item.createdAt);
-                item.publishedAt = new Date(item.publishedAt);
-            });
-            return games;
-            */
-            return transformGame(response.data.games);
+            var games = response.data.games.slice(0,size);
+            
+            return transformGame(games);
           });
       },
       findAll : function(offset,size){

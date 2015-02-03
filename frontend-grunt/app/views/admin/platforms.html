@@ -1,0 +1,48 @@
+<div class="admin">
+<h2>Administration / Platforms</h2>
+<div class="form-group">
+  <label for="Search" class="col-sm-2 control-label">Search</label>
+  <div class="col-sm-10">
+    <input type="search" class="form-control" ng-model="search.name" placeholder="search">
+  </div>
+</div>
+<table class="table">
+	<thead>
+		<th>select</th>
+		<th>code</th>
+		<th>logo</th>
+		<th>name</th>
+		<th>shortname</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="platform in platforms | filter:search">
+			<td><input type="checkbox" value="{{platform.active}}"></td>
+			<td>{{platform.code}}</td>
+			<td><img src="{{platform.logo}}" class="logo small"></td>
+			<td>{{platform.name}}</td>
+			<td>{{platform.shortname}}</td>
+			<td>
+				<a class="button" href="#/admin/platform/edit">edit</a>
+				<a class="button" href="#/admin/platform/delete">delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<nav>
+  <ul class="pagination">
+    <li class="disabled">
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-repeat="page in pages"><a href="#/admin/platforms/pager/{{page.number}}">{{page.number}}</a></li>
+    <li class="disabled">
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>

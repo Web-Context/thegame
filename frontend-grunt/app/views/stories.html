@@ -1,8 +1,8 @@
 <section class="news">
 	<h2>Stories</h2>
-	<article ng-repeat="item in articles" class="game">
-		<img class="cover small" src="{{item.cover}}"><h3><a href="#/news/{{item.id}}" rel="tooltip" title="read full story for {{item.title}}">{{item.title}}</a></h3>
-		<div class="info"><ul class="platforms"><li ng-repeat="pf in item.platforms">{{pf}}</li></ul> / {{item.createdBy}} / {{item.createdAt | date:'yyyy-MM-dd @ HH:ss'}}</div>
-		<div class="game-header">{{item.header}}</div>
+	<article ng-repeat="game in games" class="game">
+		<img class="cover small" src="{{game.cover}}"><h3><a href="#/news/{{game.id}}" rel="tooltip" title="read full story for {{game.title}}">{{game.title}}</a></h3>
+		<div class="info"><ul class="platforms"><li ng-repeat="pf in game.platforms">{{pf}}</li></ul> / {{game.createdBy}} / {{game.createdAt | date:'yyyy-MM-dd @ HH:ss'}}</div>
+		<div class="game-header">{{game.header}}</div>
 	</article>
 </ul>

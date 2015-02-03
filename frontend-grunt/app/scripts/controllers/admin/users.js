@@ -8,7 +8,7 @@
  * Controller of the webappGruntApp
  */
 angular.module('webappGruntApp')
-	.controller('UserCtrl',['$scope','UserService' ,function ($scope,UserService) {
+	.controller('AdminUsersCtrl',['$scope','UserService' ,function ($scope,UserService) {
 
 		UserService.findAll(0,10).then(function(users){
 			$scope.users = users;

@@ -29,7 +29,7 @@ angular
       })
       .when('/tests', {
         templateUrl: 'views/tests.html',
-        controller: 'GamesCtrl'
+        controller: 'TestsCtrl'
       })
       .when('/news/:id', {
         templateUrl: 'views/gameDetails.html',
@@ -47,9 +47,17 @@ angular
         templateUrl: 'views/gameDetails.html',
         controller: 'GameDetailsCtrl'
       })
+      .when('/platforms', {
+        templateUrl: 'views/platforms.html',
+        controller: 'PlatformsCtrl'
+      })
+      .when('/platforms/:id', {
+        templateUrl: 'views/platformDetails.html',
+        controller: 'PlatformDetailsCtrl'
+      })
       .when('/admin/users', {
-        templateUrl: 'views/admin/user.html',
-        controller: 'UserCtrl'
+        templateUrl: 'views/admin/users.html',
+        controller: 'AdminUsersCtrl'
       })
       .when('/admin/user/edit', {
         templateUrl: 'views/admin/profile.html',
@@ -74,6 +82,10 @@ angular
       .when('/admin/games', {
         templateUrl: 'views/admin/games.html',
         controller: 'AdminGamesCtrl'
+      })
+      .when('/admin/platforms', {
+        templateUrl: 'views/admin/platforms.html',
+        controller: 'AdminPlatformsCtrl'
       })
       .otherwise({
         redirectTo: '/news'
