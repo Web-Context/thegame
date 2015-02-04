@@ -2,12 +2,12 @@
 <div class="form-group">
   <label for="Search" class="col-sm-2 control-label">Search</label>
   <div class="col-sm-10">
-    <input type="search" class="form-control" ng-model="search" placeholder="search">
+    <input type="search" class="form-control" ng-model="search.$" placeholder="search">
   </div>
 </div>
-<table class="table">
+<table class="table admin-users">
 	<thead>
-		<th>number</th>
+		<th>#</th>
 		<th>active</th>
 		<th>avatar</th>
 		<th>Username</th>
@@ -18,7 +18,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="user in users | filter:search">
-			<td>#{{user.id}}</td>
+			<td>{{user.id}}</td>
 			<td><input type="checkbox" value="{{user.active}}"></td>
 			<td><img src="{{user.avatar}}" class="avatar"></td>
 			<td>{{user.username}}</td>

@@ -20,9 +20,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-controller="MainCtrl">
+    <div class="container-fluid profile-{{page.mode}}" ng-controller="MainCtrl">
       <div class="header">
-            <div class="dropdown pull-right" ng-if="user.profile=='admin'">
+            <div id="userprofile" class="dropdown pull-right" ng-if="user.profile=='admin'">
               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
               <img src="{{user.avatar}}" class="avatar"/>{{user.username}}
               <span class="caret"></span></button>
@@ -45,12 +45,13 @@
           <li id="news"><a ng-href="#/tests" accesskey="T">Tests</a></li>
           <li id="news"><a ng-href="#/stories" accesskey="S">Stories</a></li>
         </ul>
+        <nav class="nav nav"><ul><li ng-repeat="platform in platforms">{{platform.name}}</li></ul></nav>
       </div>
 
       <div ng-view=""></div>
 
       <div class="footer" ng-controller="FooterCtrl">
-        <p><span class="glyphicon glyphicon-copy"></span> 2015 - <a href="http://web-context.com">Web-Context</a> - <a href="mailto:contact@web-context.com?subject=feedback">@McGivrer</a></p>
+        <p>&copy; 2015 - <a href="http://web-context.com">Web-Context</a> - <a href="mailto:contact@web-context.com?subject=feedback">@McGivrer</a></p>
           <div class="row">
             <div class="col-sm-6 col-md-4">
               <div ng-repeat="platform in gamesByPlatforms" class="platform">

@@ -10,7 +10,7 @@
 angular.module('webappGruntApp')
   .controller('AdminGamesCtrl', ['$scope','GameService','$routeParams',function ($scope,GameService,$routeParams) {
     
-    GameService.findLast(0,10).then(function(games){
+    GameService.findAll(0,10).then(function(games){
         $scope.games = games;
     });
 

@@ -1,8 +1,9 @@
 {
     "users": [
         {
+            "id":"1",
             "active": true,
-            "avatar": "https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s32-c/photo.jpg",
+            "avatar": "https://lh4.googleusercontent.com/-RKqoonmJUHI/AAAAAAAAAAI/AAAAAAAAAEM/ulMs_fNyzws/s48/photo.jpg",
             "email": "frederic.delorme@web-context.com",
             "firstname": "Fr\u00e9d\u00e9ric",
             "lastname": "Delorme",
@@ -11,8 +12,9 @@
             "username": "admin"
         },
         {
+            "id":"2",
             "active": true,
-            "avatar": "https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s32-c/photo.jpg",
+            "avatar": "https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s48/photo.jpg",
             "email": "contact@web-context.com",
             "firstname": "Fr\u00e9d\u00e9ric",
             "lastname": "Delorme",

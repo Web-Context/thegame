@@ -23,48 +23,28 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
   U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+#userprofile{
+  padding:10px;
 }
-
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.header h3{
+  padding:10px;
 }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  text-align: center;
+  padding:0px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+.footer p {
+  padding:10px;
+}
 
+.profile-admin .header,
+.profile-admin .footer {
+  background-color: #000;
+  color:#fff;
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -94,8 +74,8 @@ body {
   font-size:20pt;
 }
 img.logo {
-    width:48px;
-    height:48px;
+  width:48px;
+  height:48px;
 }
 h1, h2, h3 {   
   font-family:Righteous;
@@ -283,7 +263,11 @@ section.news {
   }
 }
 
-
+table.admin-users img.avatar {
+  border-radius: 4px;
+  width:48px;
+  height:48px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
