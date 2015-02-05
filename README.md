@@ -2,7 +2,7 @@
 
 _created on January 2015, by [McG](mailto:contact@web-context.com "Send a mail to McG.")._
 
-This a demonstration project to serve a small web application providing Video Games tests and news.
+This is a demonstration project to serve a small web application providing Video Games tests and news.
 
 A Short Java web project proposing multiple versoin of the same technical architecture, but build upon toolset or not:
 
