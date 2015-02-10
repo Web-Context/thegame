@@ -1,0 +1,137 @@
+= Build a Modern and Responsive Web Application
+Frédéric Delorme<frederic.delorme@gmail.com>
+v1.0
+:data-uri:
+
+== Content
+
+:toc:
+
+
+== Preface 
+
+This document provides all necessary advices and guides to developer to be able to build a next generation web application, based on a cloud architecture. Starting with a simple scenario, you will be driven step byy step to a smart and modenr web applicaion, based on the latest java and front-end technologies, but also open to multi languages application, with "Use the rigth thing at the right place, for the right need" paradigm.
+
+We will also build the applicaiton with modern tools from collecting requirements, writing project documentation, documenting code and all that smart things in an agile lifecycle.
+
+Let's start this web adventure and build our basic user requirements.
+
+== Author
+
+Frédéric Delorme is a software architech @ GE Healthcare and is psecialize in the Web apllicaiton deployed on premise and/or in the cloud. Developing for 18 years in a cross language environment, he specialized Himself on the Java langague and the Java EE platform during the last 12 years.
+
+Working for many customers in multiple domains like insurance, banking activities and other industries, he builds a solid knowledge on how to build industrial application with a big attention to testability, robustness and deployability.
+
+== Content
+
+{toc}
+
+
+== Business Requirement, the users' stories
+
+How many people start a project with partial specification, with  some goal like "we need to manage people" or, "it might provide usage statistics" ?
+
+How to manage specification changes, and to integrate new needs from your prefered customer in the current release cycle, minimizing change impact ?
+
+That what we are going to answer to in the is chapter, proposing to use the right tools to manage mutiple technical and quality needs.
+
+The first of all is how to collect basic users requirement and how to maintains and version this documents.
+
+Mainly all of this quality and tracking requirements are provided by tools like Source Code Management tools, like SVN or GIT.
+
+Ok, but how to manager famous Microsoft Word document in such tools ?
+
+This is the first answer we will bring to our smart reader :
+
+DO NOT USE WORD :)
+
+It is not a joke, but a hard decision to go to a more agile documentation cycle, and adopt a new point of view for the project documentation.
+
+ALL PROJECT FILES ARE SOURCES !
+
+not only sources code, but also requirement documents.
+
+But how can we reach such point of view ?
+
+By using the right tools at the right place !
+
+My purpose in this particuar range of tools, speaking about documentation, is to use one of the bigest advanced technology : "text editor" !
+
+Any text editor can be used by anyone.
+
+Anyone can respect basic syntax convention to produce some readable text.
+
+Documentation is nothing else than simple text.
+
+So let's use a text editor to build solid and rich documentaion.
+
+But let's add a smart decorating tool:  http://asciidoctor.org[AsciiDoctor] !
+
+This smart command line application (what ??) provides all necessary tools to produce clear, reliable and maintainable documentation.
+
+to get a good user (as developer here) experience, I propose to use an advanced text editor like the http://sublimetext.com/[Sublime Text] editor and some amazing plugin providing live preview of your doc.
+
+And now, how to get rich, structured and valid
+ user requirement ? Using some USe cases, describing features of your application.
+
+=== Stories and Use Cases
+
+What we want to describe in this chapter is how to collect and write the user stories.  Or exactly, what is a user is intend to do with the needed application.
+
+How to describe a user story ? Just say what a use would be able to do with it.
+ 
+1. Any user (anonymous) can visit and see latest added game file on the web site, sorted by game platform (PlayStation 4, Xbox one, etc...) and game categories (actions, adventures, Role Playing Game, First Person Shooter, Open World, etc...).
+
+1. Any user can discover latest site activities, games added, public user profile added, platform added.
+
+1. User must loogged in to the application to access right restricted features.
+
+1. A logged in user can edit its own user profile information.
+
+1. A logged in user can view its own games lists.
+
+1. A logged in user can add a new game to one of its own lists.
+
+1. A logged user can share one of its list with other site users by mail.
+
+1. A logged user can export one of its games lists to specific format like CSV, Microsoft Excel or html file.
+
+
+Ok, this a first list of the user requirements.
+
+Now how to organize such list to provide input to developers ? We can not just send this as is.  A developer need more details on how to proceed such use cases.
+
+But, oups, we talk about Use Case, User requirements, User Stories, but, do you know what we are talking about ?
+
+
+Ok, so let's have some details on those defintions. these defintion are not official ones, but there are how I understand those terms and how I use these on our projects.
+
+
+User Story::
+A user story is exactly what it is intend to be: a story explaining what kind of action a user can perform on our futur application. A user story is a sort of scenario where a User conducts one or more action, but concerning only one concept in the application, 
+
+_Example 1:_ 
+
+[source,text]
+----
+A user can logged in to the application and edit its user profile information.
+----
+
+If we concerntrate on the first listed needed feature, we can get one User Story:
+
+[source,text]
+----
+Any user (anonymous) can visit and see latest added game file
+on the web site, sorted by game platform (PlayStation 4, 
+Xbox one, etc...) and game categories (actions, adventures, 
+Role Playing Game, First Person Shooter, Open World, etc...).
+----
+
+Ok, let go down a level of analysis.
+
+
+Use Case::
+
+
+
+User requirements::

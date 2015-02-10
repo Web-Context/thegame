@@ -14,12 +14,18 @@ angular.module('webappGruntApp')
 
     // Public API here
     return {
-      findByUsername: function(username){
+      findByUsername: function(username,password){
         return $http.get('rest/users.json',{username:username})
           .then(function (response) {
             var users = response.data.users;
-
-            return users;
+            var retUser = null;
+            users.forEach(function(user){
+              if(user.username == username &&
+                 user.password == password){
+                 retUser = user;
+              }
+            },retUser);
+          return retUser;
         });
       },
       findAll: function (offset,pageSize) {
