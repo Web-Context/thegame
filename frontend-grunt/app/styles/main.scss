@@ -150,6 +150,9 @@ img.logo {
   width:96px;
   height:96px;
 }
+img.logo-console {
+  width:48px;
+}
 h1, h2, h3 {   
   font-family:Righteous;
 }
@@ -302,7 +305,12 @@ article.game {
     }
   }
 }
-
+article.test{
+  display:inline-block;
+  width:45%;
+  margin-right:1%;
+  padding-right:1%;
+}
 section.news {
   article.game {
     div.game-header {

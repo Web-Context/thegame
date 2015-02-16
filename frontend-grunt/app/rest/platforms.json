@@ -4,36 +4,42 @@
 			"code":"x360",
 			"name":"XBox 360",
 			"shortname":"X360",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/x360.png",
 			"manufacturer":"Microsoft"
 		},
 		{
 			"code":"xone",
 			"name":"XBox One",
 			"shortname":"XOne",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/xone.png",
 			"manufacturer":"Microsoft"
 		},
 		{
 			"code":"ps3",
 			"name":"Playstation 3",
 			"shortname":"PS3",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/ps3.png",
 			"manufacturer":"Sony Computer Entertainment"
 		},
 		{
 			"code":"ps4",
 			"name":"Playstation 4",
 			"shortname":"PS4",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/ps4.png",
 			"manufacturer":"Sony Computer Entertainment"
 		},
 		{
 			"code":"wii",
 			"name":"Nintendo Wii",
 			"shortname":"Wii",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/wiiu.png",
 			"manufacturer":"Nintendo Ltd."
 		},
 		{
 			"code":"wiiu",
 			"name":"Nintendo WiiU",
 			"shortname":"WiiU",
+			"logo":"http://www.cobrason.com/media/useruploads/logos/wiiu.png",
 			"manufacturer":"Nintendo Ltd."
 		}
 	]

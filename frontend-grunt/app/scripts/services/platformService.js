@@ -49,5 +49,5 @@ angular.module('webappGruntApp')
 			return platforms;
           });
         }
-      }
+      };
   }]);

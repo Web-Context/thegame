@@ -1,0 +1,13 @@
+{
+	"user": {
+		"id": "2",
+		"username": "admin",
+		"profile": "admin",
+		"password": "password",
+		"email": "contact@web-context.com",
+		"firstname": "Fr\u00e9d\u00e9ric",
+		"lastname": "Delorme",
+		"avatar": "https://lh3.googleusercontent.com/-LnwgJPshkMw/AAAAAAAAAAI/AAAAAAAAAAA/p_aJLHbGfgQ/s48/photo.jpg",
+		"active": true
+	}
+}

@@ -25,15 +25,10 @@
           <div class="header">
 
             <div id="userprofile" class="dropdown pull-right">
-              <button type="button" ng-if="user == undefined" ng-click="showLoginForm();" 
-              class="btn btn-defaut glyphicon glyphicon-login">Login</button>
-              <button ng-if="user.username != undefined" class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" title="{{user.firstname}} {{user.lastname}}">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" title="{{user.firstname}} {{user.lastname}}">
                 <img src="{{user.avatar}}" class="avatar"/>&nbsp; {{user.username}}
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-
-                  <li ng-repeat="item in application.menu">{{item.title}}</li>
-
                   <li ng-if="user.profile=='admin'" role="presentation" class="dropdown-header">Administration</li>
                   <li ng-if="user.profile=='admin'" role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/games">Games</a></li>
                   <li ng-if="user.profile=='admin'" role="presentation"><a role="menuitem" tabindex="-1" href="#/admin/platforms">Platforms</a></li>
@@ -74,7 +69,6 @@
           </div>
         </div>
 
-        <div ng-include="login.html"></div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

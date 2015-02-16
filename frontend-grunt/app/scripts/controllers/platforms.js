@@ -9,7 +9,7 @@
  */
 angular.module('webappGruntApp')
   .controller('PlatformsCtrl', ['$scope','PlatformService',function ($scope,PlatformService) {
-    PlatformService.findLast(0,10).then(function(games){
+    PlatformService.findLast(0,10).then(function(platforms){
         $scope.platfoms = platforms;
     });
 

@@ -66,7 +66,7 @@ module.exports = function (grunt) {
     cucumberjs: {
       src:'test/features/scenarii',
       options:{
-        steps: "test/features/steps"
+        steps: 'test/features/steps'
       }
     },
 

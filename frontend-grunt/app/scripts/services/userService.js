@@ -9,23 +9,12 @@
  */
 angular.module('webappGruntApp')
   .factory('UserService', ['$http',function ($http) {
-    // Service logic
-    // ...
-
-    // Public API here
     return {
       findByUsername: function(username,password){
-        return $http.get('rest/users.json',{username:username})
+        return $http.get('rest/users/'+username+'.json',{username:username})
           .then(function (response) {
-            var users = response.data.users;
-            var retUser = null;
-            users.forEach(function(user){
-              if(user.username == username &&
-                 user.password == password){
-                 retUser = user;
-              }
-            },retUser);
-          return retUser;
+            var user = response.data.user;
+            return user;
         });
       },
       findAll: function (offset,pageSize) {
